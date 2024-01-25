@@ -1,3 +1,4 @@
+import MainNav from "./MainNav";
 import TopNav from "./TopNav";
 
 const Nav = () => {
@@ -5,6 +6,7 @@ const Nav = () => {
     <div className="bg-black">
       <nav className="font-raleway">
         <TopNav />
+        <MainNav />
       </nav>
     </div>
   );

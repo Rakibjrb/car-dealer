@@ -22,7 +22,9 @@ const TopNav = () => {
             onClick={() => {
               setDealer(true);
             }}
-            className={`${dealer && "text-red-600"}  font-semibold`}
+            className={`${
+              dealer ? "text-red-600" : "text-gray-400"
+            }  font-semibold`}
           >
             Dealer Profile
           </button>{" "}
@@ -31,7 +33,9 @@ const TopNav = () => {
             onClick={() => {
               setDealer(false);
             }}
-            className={`${dealer ? "" : "text-red-600"} font-semibold`}
+            className={`${
+              dealer ? "text-gray-400" : "text-red-600"
+            } font-semibold`}
           >
             Seller Profile
           </button>
