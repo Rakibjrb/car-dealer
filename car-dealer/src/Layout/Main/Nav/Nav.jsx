@@ -4,7 +4,7 @@ import TopNav from "./TopNav";
 const Nav = () => {
   return (
     <div className="bg-black">
-      <nav className="font-raleway">
+      <nav className="font-raleway space-y-3">
         <TopNav />
         <MainNav />
       </nav>
