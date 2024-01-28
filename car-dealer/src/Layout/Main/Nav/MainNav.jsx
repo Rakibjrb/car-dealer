@@ -29,7 +29,7 @@ const MainNav = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="text-white max-w-screen-2xl mx-auto flex justify-between items-center pb-6 px-3">
+    <div className="text-white max-w-screen-2xl mx-auto flex justify-between items-center pb-2 px-3">
       <div>
         <h4 className="uppercase font-semibold text-3xl md:text-4xl">
           Motor <span className="text-red-600">X</span>

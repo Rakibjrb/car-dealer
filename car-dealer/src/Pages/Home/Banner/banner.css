@@ -1,0 +1,7 @@
+.banner {
+  background: linear-gradient(#00000071, #00000067),
+    url("../../../assets/images/banner/banner3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

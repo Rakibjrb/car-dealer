@@ -1,5 +1,11 @@
+import Banner from "../../Pages/Home/Banner/Banner";
+
 const Main = () => {
-  return <>Main Layout</>;
+  return (
+    <>
+      <Banner />
+    </>
+  );
 };
 
 export default Main;
