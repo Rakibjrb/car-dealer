@@ -29,7 +29,7 @@ const MainNav = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="text-white max-w-screen-2xl mx-auto flex justify-between items-center pb-2 px-3 2xl:px-0">
+    <div className="text-white max-w-screen-2xl mx-auto flex justify-between items-center pt-4 lg:pt-0 pb-2 px-3 2xl:px-0">
       <div>
         <h4 className="uppercase font-semibold text-3xl md:text-4xl">
           Motor <span className="text-red-600">X</span>
@@ -55,7 +55,7 @@ const MainNav = () => {
                 : "absolute top-0 -left-[9999px] opacity-0"
             }`}
           >
-            <ul className="bg-gray-700 min-h-screen w-[320px] pt-5 flex flex-col">
+            <ul className="fixed bg-gray-700 min-h-screen w-[300px] pt-2 flex flex-col">
               {readyLink}
             </ul>
           </div>

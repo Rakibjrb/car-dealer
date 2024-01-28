@@ -6,7 +6,7 @@ const TopNav = () => {
   const [dealer, setDealer] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
+    <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
       <div className="flex flex-col md:flex-row items-center gap-4">
         <div className="flex items-center">
           <div className="bg-red-600 pl-16 pr-12 py-4 relative h-[52px]">
