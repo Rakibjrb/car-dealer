@@ -55,7 +55,7 @@ const MainNav = () => {
                 : "absolute top-0 -left-[9999px] opacity-0"
             }`}
           >
-            <ul className="fixed bg-gray-700 min-h-screen w-[300px] pt-2 flex flex-col">
+            <ul className="fixed bg-gray-700 min-h-screen w-[300px] pt-2 flex flex-col z-50">
               {readyLink}
             </ul>
           </div>

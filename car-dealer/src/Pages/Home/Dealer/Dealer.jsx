@@ -1,3 +1,5 @@
+import MainDealer from "./MainDealer";
+
 const Dealer = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-3 2xl:px-0">
@@ -18,6 +20,7 @@ const Dealer = () => {
           </p>
         </div>
       </div>
+      <MainDealer />
     </div>
   );
 };
