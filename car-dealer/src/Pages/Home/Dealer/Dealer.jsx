@@ -2,7 +2,7 @@ import MainDealer from "./MainDealer";
 
 const Dealer = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-3 2xl:px-0">
+    <div className="max-w-screen-2xl mx-auto px-3 2xl:px-0 font-raleway">
       <h2 className="text-xl uppercase font-semibold text-red-600 border-b border-red-500 border-dotted inline-block">
         20% off for online booking
       </h2>
@@ -13,7 +13,7 @@ const Dealer = () => {
           </h2>
         </div>
         <div className="flex-1">
-          <p className=" text-xl pl-4 border-l-4 border-red-600 w-full">
+          <p className=" text-xl pl-4 border-l-4 border-red-600 w-full text-justify">
             For 15 years, we raising the standerd of used car retailing with one
             of the most innovative reliable used programmes ever created. A
             comprehesive range of
