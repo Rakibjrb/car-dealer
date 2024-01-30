@@ -3,7 +3,7 @@ import MainFeatures from "./MainFeatures";
 const Features = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-3 xl:px-0">
-      <h2 className="text-xl uppercase font-semibold text-red-600 border-b border-red-500 border-dotted inline-block">
+      <h2 className="text-xl uppercase font-semibold text-red-600 border-b border-red-500 border-dotted inline-block font-raleway">
         20% off for online booking
       </h2>
       <div className="mt-4 mb-10 flex items-center flex-col md:flex-row space-y-8 md:space-y-0">

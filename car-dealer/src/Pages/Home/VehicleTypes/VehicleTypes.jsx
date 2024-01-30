@@ -15,24 +15,29 @@ const cars = [
 
 const VehicleTypes = () => {
   return (
-    <div className="max-w-screen-xl mx-auto font-raleway px-3 xl:px-0">
-      <Header maintext={"Brows by your favorite"} colortext={"Vehicle types"} />
-      <div className="grid md:grid-cols-3 gap-5 mt-8">
-        {cars?.map((car, index) => (
-          <div
-            key={`type${car.id}`}
-            className={`bg-black ${
-              (index == 0 && "row-span-2") || (index == 1 && "row-span-2")
-            } flex justify-center items-center py-5 rounded-lg relative overflow-hidden parent-div`}
-          >
-            <div className="linkDiv absolute top-[300px] left-0 w-full h-full bg-[#0000005c] flex justify-center items-center">
-              <Link className="text-white uppercase bg-red-600 px-8 py-3 rounded-lg">
-                {car.name}
-              </Link>
+    <div className="bg-[#F2F5FC] py-32">
+      <div className="max-w-screen-xl mx-auto font-raleway px-3 xl:px-0">
+        <Header
+          maintext={"Brows by your favorite"}
+          colortext={"Vehicle types"}
+        />
+        <div className="grid md:grid-cols-3 gap-5 mt-8">
+          {cars?.map((car, index) => (
+            <div
+              key={`type${car.id}`}
+              className={`bg-black ${
+                (index == 0 && "row-span-2") || (index == 1 && "row-span-2")
+              } flex justify-center items-center py-5 rounded-lg relative overflow-hidden parent-div`}
+            >
+              <div className="linkDiv absolute top-[300px] left-0 w-full h-full bg-[#0000005c] flex justify-center items-center">
+                <Link className="text-white uppercase bg-red-600 px-8 py-3 rounded-lg">
+                  {car.name}
+                </Link>
+              </div>
+              <img className="w-[70%]" src={car.img} alt={car.name} />
             </div>
-            <img className="w-[70%]" src={car.img} alt={car.name} />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
