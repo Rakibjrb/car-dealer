@@ -1,15 +1,15 @@
-import MainDealer from "./MainDealer";
+import MainFeatures from "./MainFeatures";
 
-const Dealer = () => {
+const Features = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-3 xl:px-0 font-raleway">
+    <div className="max-w-screen-xl mx-auto px-3 xl:px-0">
       <h2 className="text-xl uppercase font-semibold text-red-600 border-b border-red-500 border-dotted inline-block">
         20% off for online booking
       </h2>
       <div className="mt-4 mb-10 flex items-center flex-col md:flex-row space-y-8 md:space-y-0">
         <div className="flex-1">
-          <h2 className="capitalize text-5xl font-bold xl:w-3/4">
-            We, Re Trusted your car <span className="text-red-600">dealer</span>
+          <h2 className="capitalize text-5xl font-bold xl:w-3/4 2xl:w-2/3">
+            Our Extra <span className="text-red-600">Features</span>
           </h2>
         </div>
         <div className="flex-1">
@@ -20,9 +20,9 @@ const Dealer = () => {
           </p>
         </div>
       </div>
-      <MainDealer />
+      <MainFeatures />
     </div>
   );
 };
 
-export default Dealer;
+export default Features;

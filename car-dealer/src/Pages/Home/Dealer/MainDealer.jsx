@@ -59,7 +59,7 @@ const MainDealer = () => {
             src={dealercar}
             alt=""
           />
-          <div className="absolute md:-top-20 md:right-5 lg:top-0 lg:right-10 xl:top-10 xl:right-32 bg-[#f5f5f5] border-b-4 py-5 border-b-black hidden lg:block">
+          <div className="absolute md:-top-20 md:right-5 lg:top-0 lg:right-10 xl:top-2 xl:right-24 bg-[#f5f5f5] border-b-4 py-5 border-b-black hidden lg:block">
             <h2 className="text-7xl text-red-600 font-bold text-center">25</h2>
             <p className="text-xl text-center font-semibold w-2/3 mx-auto mt-4">
               Year of experience

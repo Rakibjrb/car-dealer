@@ -15,7 +15,7 @@ const cars = [
 
 const VehicleTypes = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto font-raleway px-3 2xl:px-0">
+    <div className="max-w-screen-xl mx-auto font-raleway px-3 xl:px-0">
       <Header maintext={"Brows by your favorite"} colortext={"Vehicle types"} />
       <div className="grid md:grid-cols-3 gap-5 mt-8">
         {cars?.map((car, index) => (

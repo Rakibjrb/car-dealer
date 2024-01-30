@@ -1,5 +1,6 @@
 import Banner from "../../Pages/Home/Banner/Banner";
 import Dealer from "../../Pages/Home/Dealer/Dealer";
+import Features from "../../Pages/Home/Features/Features";
 import VehicleTypes from "../../Pages/Home/VehicleTypes/VehicleTypes";
 
 const Main = () => {
@@ -8,7 +9,7 @@ const Main = () => {
       <Banner />
       <Dealer />
       <VehicleTypes />
-      <div></div>
+      <Features />
     </div>
   );
 };

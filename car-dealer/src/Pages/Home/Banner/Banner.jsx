@@ -4,7 +4,7 @@ import "./banner.css";
 const Banner = () => {
   return (
     <div className="bg-black font-raleway">
-      <div className="banner max-w-screen-2xl mx-auto py-32 lg:min-h-[calc(100vh-112px)] flex justify-center items-center">
+      <div className="banner max-w-screen-xl mx-auto py-32 lg:min-h-[calc(100vh-112px)] flex justify-center items-center">
         <div className="w-full">
           <div className="text-center space-y-10">
             <h2 className="text-white text-xl uppercase font-semibold">
