@@ -1,6 +1,7 @@
 import Banner from "../../Pages/Home/Banner/Banner";
 import BestSelling from "../../Pages/Home/BestSelling/BestSelling";
 import Dealer from "../../Pages/Home/Dealer/Dealer";
+import Featured from "../../Pages/Home/Featured/Featured";
 import Features from "../../Pages/Home/Features/Features";
 import VehicleTypes from "../../Pages/Home/VehicleTypes/VehicleTypes";
 
@@ -12,7 +13,7 @@ const Main = () => {
       <VehicleTypes />
       <Features />
       <BestSelling />
-      <div></div>
+      <Featured />
     </div>
   );
 };
