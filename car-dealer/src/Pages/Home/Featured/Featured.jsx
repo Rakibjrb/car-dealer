@@ -13,6 +13,11 @@ const Featured = () => {
             <Card key={`featuredCard${index}`} data={feature} />
           ))}
         </div>
+        <div className="flex justify-center mt-10">
+          <button className="bg-red-600 py-3 px-7 rounded-md uppercase font-semibold text-white">
+            More Listings
+          </button>
+        </div>
       </div>
     </div>
   );
