@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import SwitchProfile from "./SwitchProfile";
 
 const links = [
   { id: "alsdflkssfdgd", name: "home" },
@@ -55,7 +56,11 @@ const MainNav = () => {
                 : "absolute top-0 -left-[9999px] opacity-0"
             }`}
           >
-            <ul className="fixed bg-gray-700 min-h-screen w-[300px] pt-2 flex flex-col z-50">
+            <ul className="fixed bg-gray-700 min-h-screen w-[300px] flex flex-col z-50">
+              <div className="border-b-4 border-red-600 py-5 px-10">
+                <h2 className="text-2xl mb-3">Switch Profile</h2>
+                <SwitchProfile />
+              </div>
               {readyLink}
             </ul>
           </div>

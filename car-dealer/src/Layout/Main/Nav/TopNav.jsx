@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CgMail } from "react-icons/cg";
+import SwitchProfile from "./SwitchProfile";
 
 const TopNav = () => {
-  const [dealer, setDealer] = useState(false);
-
   return (
     <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
       <div className="flex flex-col md:flex-row items-center gap-4">
@@ -17,29 +15,7 @@ const TopNav = () => {
           </div>
           <p className="text-white ml-10 font-sans">+8801732-247599</p>
         </div>
-        <div className="text-gray-300 flex items-center gap-2">
-          <button
-            onClick={() => {
-              setDealer(true);
-            }}
-            className={`${
-              dealer ? "text-red-600" : "text-gray-400"
-            }  font-semibold`}
-          >
-            Dealer Profile
-          </button>{" "}
-          |
-          <button
-            onClick={() => {
-              setDealer(false);
-            }}
-            className={`${
-              dealer ? "text-gray-400" : "text-red-600"
-            } font-semibold`}
-          >
-            Seller Profile
-          </button>
-        </div>
+        <SwitchProfile />
       </div>
       <div className="text-white flex items-center gap-5 mt-5 lg:mt-0">
         <div className="flex items-center gap-2">
