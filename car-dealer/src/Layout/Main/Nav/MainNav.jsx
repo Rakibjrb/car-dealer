@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import SwitchProfile from "./SwitchProfile";
@@ -62,6 +62,9 @@ const MainNav = () => {
                 <SwitchProfile />
               </div>
               {readyLink}
+              <div className="px-10">
+                <Link className="text-gray-300">Login/Sign In</Link>
+              </div>
             </ul>
           </div>
         </div>

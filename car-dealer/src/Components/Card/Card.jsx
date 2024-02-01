@@ -22,7 +22,7 @@ const Card = ({ data }) => {
           {data?.date}
         </p>
       </div>
-      <div className="p-7">
+      <div className="p-4 xl:p-7">
         <p className="text-red-600 text-xl">{data?.subtitle}</p>
         <h2 className="font-bold text-2xl my-3">{data?.title}</h2>
         <p className="text-red-600 text-xl font-bold">${data?.price}</p>
