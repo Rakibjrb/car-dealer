@@ -12,7 +12,7 @@ const Footer = () => {
             Through Us?
           </h2>
           <div className="flex items-center">
-            <button className="bg-red-600 py-5 px-10 rounded-md font-semibold text-white uppercase">
+            <button className="bg-red-600 hover:bg-red-700 transition-colors py-5 px-10 rounded-md font-semibold text-white uppercase">
               Sell Your Car Today
             </button>
           </div>

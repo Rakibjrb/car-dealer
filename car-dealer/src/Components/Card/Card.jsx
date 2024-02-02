@@ -1,12 +1,15 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaHeart } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { LuFuel } from "react-icons/lu";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { GiGearStickPattern } from "react-icons/gi";
 
 const Card = ({ data }) => {
+  const [resected, setResected] = useState(false);
+
   return (
     <div className="font-raleway bg-white rounded-t-lg rounded-b-lg">
       <div className="relative">
@@ -47,11 +50,18 @@ const Card = ({ data }) => {
           </div>
         </div>
         <div className="flex justify-between">
-          <Link className="flex items-center font-semibold gap-5 uppercase">
+          <Link className="hover:text-red-600 transition-colors flex items-center font-semibold gap-5 uppercase">
             View Details <FaArrowRight />
           </Link>
-          <button>
-            <FaRegHeart className="text-xl" />
+          <button
+            onClick={() => setResected(true)}
+            className="hover:bg-[#aaa] hover:shadow-xl hover:shadow-black transition-colors rounded-full p-2"
+          >
+            {resected ? (
+              <FaHeart className="text-xl" />
+            ) : (
+              <FaRegHeart className="text-xl" />
+            )}
           </button>
         </div>
       </div>

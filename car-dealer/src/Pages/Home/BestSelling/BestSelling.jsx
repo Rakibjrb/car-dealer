@@ -12,7 +12,7 @@ const BestSelling = () => {
           <h3 className="text-2xl text-white">
             From <span className="text-red-600">$14299.00</span>
           </h3>
-          <button className="text-white bg-red-600 px-8 py-3 rounded-lg">
+          <button className="text-white bg-red-600 hover:bg-red-700 transition-colors px-8 py-3 rounded-lg">
             Buy Now
           </button>
         </div>

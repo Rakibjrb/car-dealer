@@ -30,7 +30,7 @@ const VehicleTypes = () => {
               } flex justify-center items-center py-5 rounded-lg relative overflow-hidden parent-div`}
             >
               <div className="linkDiv absolute top-[300px] left-0 w-full h-full bg-[#0000005c] flex justify-center items-center">
-                <Link className="text-white uppercase bg-red-600 px-8 py-3 rounded-lg">
+                <Link className="text-white uppercase bg-red-600 hover:bg-red-700 transition-colors px-8 py-3 rounded-lg">
                   {car.name}
                 </Link>
               </div>
