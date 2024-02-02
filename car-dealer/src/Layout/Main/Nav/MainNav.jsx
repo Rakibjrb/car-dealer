@@ -33,7 +33,7 @@ const MainNav = () => {
     <div className="text-white max-w-screen-xl mx-auto flex justify-between items-center pt-4 lg:pt-0 pb-2 px-3 2xl:px-0">
       <div>
         <h4 className="uppercase font-semibold text-3xl md:text-4xl">
-          Motor <span className="text-red-600">X</span>
+          Moto<span className="text-red-600">RX</span>
         </h4>
       </div>
       <div>
