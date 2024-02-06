@@ -1,0 +1,6 @@
+.teammember:hover .memberpic {
+  border: 10px solid #fff;
+}
+.teammember:hover .social-links {
+  bottom: 0;
+}
