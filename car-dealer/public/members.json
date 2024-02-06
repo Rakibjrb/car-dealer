@@ -1,0 +1,98 @@
+[
+  {
+    "id": "001",
+    "name": "Robert Gates",
+    "image": "https://i.ibb.co/cFm0Bgj/team-1-1.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "name": "Paul Wilson",
+    "image": "https://i.ibb.co/7KFKNTF/team-2.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "name": "Amanda Tim",
+    "image": "https://i.ibb.co/JQKJThH/team-3.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "name": "Benjamin Zara",
+    "image": "https://i.ibb.co/jWgsr4Y/team-4.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "name": "Robert Gates",
+    "image": "https://i.ibb.co/vwgbdfX/team-5.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "name": "Paul Wilson",
+    "image": "https://i.ibb.co/mRYZ02r/team-6.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "007",
+    "name": "Amanda Tim",
+    "image": "https://i.ibb.co/fMm9hqB/team-17.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "name": "Benjamin Zara",
+    "image": "https://i.ibb.co/1JH5f58/team-8.jpg",
+    "social_media": [
+      {
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.twitter.com"
+      }
+    ]
+  }
+]
