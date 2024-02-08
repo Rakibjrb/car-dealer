@@ -5,6 +5,7 @@ import Listing from "../Pages/Listing/Listing";
 import Pricing from "../Pages/Pricing/Pricing";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
+import Switch from "../Pages/User/Switch";
 
 const routes = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const routes = createBrowserRouter([
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "/user",
+    element: <Switch />,
   },
 ]);
 

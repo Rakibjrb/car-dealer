@@ -22,7 +22,9 @@ const TopNav = () => {
           <CgMail className="text-2xl text-red-500" />
           <p>help@motorbox.com</p>
         </div>
-        <Link className="text-gray-300">Login/Sign In</Link>
+        <Link to="/user" className="text-gray-300">
+          Login/Sign In
+        </Link>
       </div>
     </div>
   );

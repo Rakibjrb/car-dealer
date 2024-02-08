@@ -63,7 +63,9 @@ const MainNav = () => {
               </div>
               {readyLink}
               <div className="px-10">
-                <Link className="text-gray-300">Login/Sign In</Link>
+                <Link to="/user" className="text-gray-300">
+                  Login/Sign In
+                </Link>
               </div>
             </ul>
           </div>

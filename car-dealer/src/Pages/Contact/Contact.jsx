@@ -10,7 +10,7 @@ const Contact = () => {
         feedback is valuable to us, and
         {"we're"} committed to providing excellent support.
       </p>
-      <form className="w-full max-w-xl mx-auto mt-7">
+      <form className="w-full max-w-xl mx-auto mt-7 border p-6 rounded-md">
         <div className="mb-4">
           <label
             htmlFor="name"
