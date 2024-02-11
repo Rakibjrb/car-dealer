@@ -5,7 +5,7 @@ const {
   routeNotFound,
   handleErrors,
 } = require("./controllers/errorhandle/handleErrors");
-const featuredRoutes = require("./routes/featured/featured");
+const featuredRoutes = require("./routes/cars/cars");
 const app = express();
 
 app.get("/", (req, res) => {

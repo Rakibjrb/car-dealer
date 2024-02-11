@@ -1,8 +1,9 @@
-const data = require("../../../models/testimonials.json");
+const Testimonials = require("../../../models/Testimonials/testimonials");
 
-const testimonials = (req, res, next) => {
+const testimonials = async (req, res, next) => {
   try {
-    res.send(JSON.stringify(data));
+    const testimonials = await Testimonials.find({});
+    res.send(testimonials);
   } catch (error) {
     next(error);
   }
