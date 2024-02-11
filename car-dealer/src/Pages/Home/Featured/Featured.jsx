@@ -14,13 +14,15 @@ const Featured = () => {
             <Card key={`featuredCard${index}`} data={feature} />
           ))}
         </div>
-        <div className="flex justify-center mt-10">
-          <Link to={"/listing"}>
-            <button className="bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md uppercase font-semibold text-white">
-              More Listings
-            </button>
-          </Link>
-        </div>
+        {featured?.length > 6 && (
+          <div className="flex justify-center mt-10">
+            <Link to={"/listing"}>
+              <button className="bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md uppercase font-semibold text-white">
+                More Listings
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

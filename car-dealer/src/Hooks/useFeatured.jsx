@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import useAxiosPublic from "./axios/useAxiosPublic";
 
 const useFeatured = () => {
-  const { data: featured, refetch } = useQuery({
+  const axios = useAxiosPublic();
+  const { data: featured = [], refetch } = useQuery({
     queryKey: ["featuerd"],
     queryFn: async () => {
-      const res = await axios.get("./featured.json");
+      const res = await axios.get("/featured");
       return res.data;
     },
   });

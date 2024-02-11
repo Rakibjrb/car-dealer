@@ -7,6 +7,7 @@ import Pricing from "../Pages/Pricing/Pricing";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import Switch from "../Pages/User/Switch";
+import ViewDetails from "../Pages/CarDetails/ViewDetails";
 
 const routes = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Main />,
+      },
+      {
+        path: "/car-details/:id",
+        element: <ViewDetails />,
       },
       {
         path: "/listing",

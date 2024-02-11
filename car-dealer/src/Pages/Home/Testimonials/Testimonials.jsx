@@ -1,15 +1,17 @@
+import { useQuery } from "@tanstack/react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
 import clinetImage from "../../../assets/images/client/client.jpg";
 import SwiperNavButtons from "../../../Components/SwiperNavButtons/SwiperNavButtons";
+import useAxiosPublic from "../../../Hooks/axios/useAxiosPublic";
 import "swiper/css";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 
 const Testimonials = () => {
+  const axios = useAxiosPublic();
+
   const { data: testimonials } = useQuery({
     queryKey: ["testimonials"],
     queryFn: async () => {
-      const res = await axios.get("./testimonials.json");
+      const res = await axios.get("./testimonials");
       return res.data;
     },
   });

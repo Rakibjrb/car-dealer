@@ -50,7 +50,10 @@ const Card = ({ data }) => {
           </div>
         </div>
         <div className="flex justify-between">
-          <Link className="hover:text-red-600 transition-colors flex items-center font-semibold gap-5 uppercase">
+          <Link
+            to={`/car-details/${data._id}`}
+            className="hover:text-red-600 transition-colors flex items-center font-semibold gap-5 uppercase"
+          >
             View Details <FaArrowRight />
           </Link>
           <button
