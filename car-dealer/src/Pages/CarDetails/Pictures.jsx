@@ -20,7 +20,7 @@ const Pictures = ({ images }) => {
         <Swiper slidesPerView={4} spaceBetween={12}>
           {images?.map((image, index) => (
             <SwiperSlide key={`carimages${index}`}>
-              <div onClick={() => setImage(image)}>
+              <div className="cursor-pointer" onClick={() => setImage(image)}>
                 <img className="w-full h-[100px] rounded-lg" src={image} />
               </div>
             </SwiperSlide>
