@@ -7,7 +7,7 @@ import { FaRegHeart } from "react-icons/fa";
 const Details = ({ car }) => {
   return (
     <div className="space-y-4">
-      <h1 className="text-5xl font-bold">{car?.title}</h1>
+      <h1 className="text-4xl md:text-5xl font-bold">{car?.title}</h1>
       <h2 className="text-3xl font-semibold">{car?.subtitle}</h2>
       <div className="my-5 flex gap-5">
         <div>

@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import Pictures from "./Pictures";
 import Details from "./Details";
+import CarFeatures from "./CarFeatures";
 
 const ViewDetails = () => {
   const carId = useParams().id;
@@ -17,13 +18,20 @@ const ViewDetails = () => {
   });
   return (
     <div className="max-w-screen-xl mx-auto px-3 pt-10 xl:px-0 font-raleway">
-      <div className="flex items-start gap-7">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row lg:items-start gap-7">
+        <div className="lg:w-1/2">
           <Pictures images={car?.image} />
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <Details car={car} />
         </div>
+      </div>
+      <div className="mt-16">
+        <CarFeatures />
+      </div>
+      <div className="mt-16">
+        <h3 className="text-3xl font-semibold mb-5">Read Car Details</h3>
+        <p className="text-justify md:text-left">{car?.details}</p>
       </div>
     </div>
   );
