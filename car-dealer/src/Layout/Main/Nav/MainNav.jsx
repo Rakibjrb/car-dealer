@@ -7,7 +7,6 @@ import SwitchProfile from "./SwitchProfile";
 const links = [
   { id: "alsdflkssfdgd", name: "home" },
   { id: "alsdsdfgeted", name: "listing" },
-  { id: "asdfgsdg", name: "pricing" },
   { id: "alssdfgsg34", name: "about" },
   { id: "alsfgd455t", name: "contact" },
 ];

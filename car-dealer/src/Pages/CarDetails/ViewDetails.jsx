@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import Pictures from "./Pictures";
@@ -32,6 +32,14 @@ const ViewDetails = () => {
       <div className="mt-16">
         <h3 className="text-3xl font-semibold mb-5">Read Car Details</h3>
         <p className="text-justify md:text-left">{car?.details}</p>
+      </div>
+      <div className="mt-10">
+        <Link
+          to={"/"}
+          className="bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md font-semibold text-white uppercase mt-8"
+        >
+          Go Home
+        </Link>
       </div>
     </div>
   );

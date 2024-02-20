@@ -1,5 +1,6 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import "./banner.css";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -17,9 +18,12 @@ const Banner = () => {
               Car is where early adopters and innovation seekers find
             </h3>
             <div className="flex justify-center">
-              <button className="bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md uppercase font-semibold flex items-center gap-2 text-white">
+              <Link
+                to={"/listing"}
+                className="bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md uppercase font-semibold flex items-center gap-2 text-white"
+              >
                 Find A Car <MdOutlineArrowOutward className="text-xl" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
