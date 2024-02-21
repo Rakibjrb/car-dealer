@@ -65,7 +65,7 @@ const Listing = () => {
                   min={10000}
                   max={50000}
                   onChange={handleLowPriceChange}
-                  onMouseUp={handleGetCars}
+                  onClick={handleGetCars}
                 />
               </div>
               <div>
@@ -77,7 +77,7 @@ const Listing = () => {
                   min={50000}
                   max={100000}
                   onChange={handleHighPriceChange}
-                  onMouseUp={handleGetCars}
+                  onClick={handleGetCars}
                 />
               </div>
             </div>
