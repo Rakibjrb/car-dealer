@@ -13,6 +13,7 @@ import Swal from "sweetalert2";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
   const alert = (icon, message) => {
@@ -70,12 +71,16 @@ const AuthProvider = ({ children }) => {
     logOut,
     login,
     alert,
+    loading,
   };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        setLoading(false);
+      } else {
+        setLoading(false);
       }
     });
     return () => unSubscribe();

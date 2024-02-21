@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import Switch from "../Pages/User/Switch";
 import ViewDetails from "../Pages/CarDetails/ViewDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 const routes = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/car-details/:id",
-        element: <ViewDetails />,
+        element: (
+          <PrivateRoutes>
+            <ViewDetails />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/listing",

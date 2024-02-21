@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { TbFidgetSpinner } from "react-icons/tb";
 import useAuth from "../../../Hooks/auth/useAuth";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const { login, alert } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  console.log(location);
 
   const handleUserLogin = (e) => {
     e.preventDefault();
@@ -17,7 +20,7 @@ const Login = () => {
       .then(() => {
         setLoading(false);
         alert("success", "User Login Success ...");
-        navigate("/");
+        navigate(location.state ? location.state : "/");
       })
       .catch(() => {
         setLoading(false);
