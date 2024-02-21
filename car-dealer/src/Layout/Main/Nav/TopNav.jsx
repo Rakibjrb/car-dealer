@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { CgMail } from "react-icons/cg";
 import SwitchProfile from "./SwitchProfile";
+import { useState } from "react";
+import useAuth from "../../../Hooks/auth/useAuth";
 
 const TopNav = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const { user } = useAuth();
+
   return (
     <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
       <div className="flex flex-col md:flex-row items-center gap-4">
@@ -22,9 +27,27 @@ const TopNav = () => {
           <CgMail className="text-2xl text-red-500" />
           <p>help@motorbox.com</p>
         </div>
-        <Link to="/user" className="text-gray-300">
-          Login/Sign In
-        </Link>
+        {!user ? (
+          <Link to="/user" className="text-gray-300">
+            Login/Sign In
+          </Link>
+        ) : (
+          <div className="relative">
+            <img
+              onClick={() => setShowMenu(!showMenu)}
+              className="w-10 h-10 rounded-full cursor-pointer"
+              src="https://i.ibb.co/5x441PC/user.png"
+              alt=""
+            />
+            {showMenu && (
+              <div className="absolute bg-slate-500 w-[200px] right-0 p-3 rounded-md space-y-3">
+                <h3>{user?.displayName}</h3>
+                <h3>View Cart</h3>
+                <button>Logout</button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
