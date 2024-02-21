@@ -4,7 +4,7 @@ import { LuSend } from "react-icons/lu";
 
 const Footer = () => {
   return (
-    <div className="py-20 xl:py-24 mt-24 lg:mt-32 bg-[#0A0A0A]">
+    <div className="py-20 xl:py-24 mt-20 bg-[#0A0A0A]">
       <div className="max-w-screen-xl mx-auto px-3 xl:px-0 font-raleway">
         <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0">
           <h2 className="capitalize text-4xl lg:text-5xl font-bold text-white text-center lg:text-left md:w-[80%] lg:w-[45%]">

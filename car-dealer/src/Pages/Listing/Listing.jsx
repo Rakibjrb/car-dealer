@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
+import ListingCard from "../../Components/Card/Listing";
 
 const Listing = () => {
   const [lowPrice, setLowPrice] = useState(10000);
   const [maxPrice, setMaxPrice] = useState(50000);
+  const [cars, setCars] = useState([]);
+  const axios = useAxiosPublic();
 
   const handleHighPriceChange = (e) => {
     setMaxPrice(e.target.value);
@@ -18,13 +22,20 @@ const Listing = () => {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get("/listing/cars")
+      .then((res) => setCars(res?.data?.cars))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="max-w-screen-xl mx-auto px-3 xl:px-0 font-raleway">
       <h1 className="text-4xl font-bold text-center mt-10">
         Find Your <span className="text-red-600">Car</span>
       </h1>
-      <div className="grid grid-cols-8 gap-5 mt-10">
-        <div className="col-span-2 space-y-10">
+      <div className="grid md:grid-cols-8 md:gap-3 lg:gap-5 mt-10">
+        <div className="md:col-span-2 space-y-10">
           <div>
             <h2 className="text-xl font-semibold mb-3">Search Your Car</h2>
             <form className="flex justify-between">
@@ -69,7 +80,13 @@ const Listing = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-6"></div>
+        <div className="mt-10 md:mt-0 md:col-span-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cars?.map((car, index) => (
+              <ListingCard key={`listingcarcard${index}`} car={car} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
