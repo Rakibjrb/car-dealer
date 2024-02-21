@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import SwitchProfile from "./SwitchProfile";
+import useAuth from "../../../Hooks/auth/useAuth";
 
 const links = [
   { id: "alsdflkssfdgd", name: "home" },
@@ -27,6 +28,7 @@ const readyLink = links?.map((link) => (
 
 const MainNav = () => {
   const [active, setActive] = useState(false);
+  const { user, logOut } = useAuth();
 
   return (
     <div className="text-white max-w-screen-xl mx-auto flex justify-between items-center pt-4 lg:pt-0 pb-5 px-3 2xl:px-0">
@@ -61,10 +63,28 @@ const MainNav = () => {
                 <SwitchProfile />
               </div>
               {readyLink}
-              <div className="px-10">
-                <Link to="/user" className="text-gray-300">
-                  Login/Sign In
-                </Link>
+              <div>
+                {!user ? (
+                  <div className="px-10">
+                    <Link to="/user" className="text-gray-300">
+                      Login/Sign In
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="border-t-4 border-red-600">
+                    <h2 className="text-2xl mb-3 pl-10 py-4">User</h2>
+                    <div className="px-10 space-y-5">
+                      <h3 className="text-xl">{user?.displayName}</h3>
+                      <h3 className="text-xl">View Cart</h3>
+                      <button
+                        onClick={() => logOut()}
+                        className="text-xl hover:text-red-600"
+                      >
+                        Logout
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </ul>
           </div>

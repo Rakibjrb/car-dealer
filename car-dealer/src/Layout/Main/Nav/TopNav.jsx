@@ -6,7 +6,7 @@ import useAuth from "../../../Hooks/auth/useAuth";
 
 const TopNav = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
 
   return (
     <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
@@ -43,7 +43,9 @@ const TopNav = () => {
               <div className="absolute bg-slate-500 w-[200px] right-0 p-3 rounded-md space-y-3">
                 <h3>{user?.displayName}</h3>
                 <h3>View Cart</h3>
-                <button>Logout</button>
+                <button className="hover:text-red-600" onClick={() => logOut()}>
+                  Logout
+                </button>
               </div>
             )}
           </div>
