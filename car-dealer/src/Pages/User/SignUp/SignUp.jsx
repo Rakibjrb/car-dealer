@@ -1,21 +1,12 @@
 import { useState } from "react";
 import { TbFidgetSpinner } from "react-icons/tb";
 import useAuth from "../../../Hooks/auth/useAuth";
-import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const { createUser, updateNameAndPhoto } = useAuth();
   const [loading, setLoading] = useState(false);
-
-  const alert = (icon, message) => {
-    Swal.fire({
-      position: "top-end",
-      icon: icon,
-      title: message,
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  };
+  const { createUser, updateNameAndPhoto, alert } = useAuth();
+  const navigate = useNavigate();
 
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -29,6 +20,7 @@ const SignUp = () => {
           .then(() => {
             alert("success", "User creation successfull ...");
             setLoading(false);
+            navigate("/");
           })
           .catch(() => {
             alert("warning", "Something went wrong !!!");

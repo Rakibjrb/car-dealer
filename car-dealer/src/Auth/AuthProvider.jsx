@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -38,6 +39,10 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   const logOut = () => {
     Swal.fire({
       title: "Are you sure?",
@@ -49,7 +54,10 @@ const AuthProvider = ({ children }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         signOut(auth)
-          .then(() => alert("success", "Logout Success ..."))
+          .then(() => {
+            alert("success", "Logout Success ...");
+            setUser(null);
+          })
           .catch(() => alert("warning", "Something went wrong !!!"));
       }
     });
@@ -60,6 +68,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     updateNameAndPhoto,
     logOut,
+    login,
+    alert,
   };
 
   useEffect(() => {
