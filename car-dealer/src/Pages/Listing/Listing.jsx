@@ -18,7 +18,10 @@ const Listing = () => {
 
   const handleGetCars = () => {
     if (lowPrice < maxPrice) {
-      console.log(lowPrice, maxPrice);
+      axios
+        .get(`/listing/sort/price?low=${lowPrice}&high=${maxPrice}`)
+        .then((res) => setCars(res.data?.cars))
+        .catch((err) => console.log(err));
     }
   };
 
@@ -81,11 +84,17 @@ const Listing = () => {
           </div>
         </div>
         <div className="mt-10 md:mt-0 md:col-span-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cars?.map((car, index) => (
-              <ListingCard key={`listingcarcard${index}`} car={car} />
-            ))}
-          </div>
+          {cars?.length ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {cars?.map((car, index) => (
+                <ListingCard key={`listingcarcard${index}`} car={car} />
+              ))}
+            </div>
+          ) : (
+            <h1 className="text-3xl text-center uppercase font-semibold mt-16">
+              No Cars found
+            </h1>
+          )}
         </div>
       </div>
     </div>
