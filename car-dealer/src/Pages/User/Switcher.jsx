@@ -13,7 +13,7 @@ const Switcher = ({ data }) => {
           onClick={handleFormSwitch}
           className="text-red-500 hover:text-black"
         >
-          Sign Up
+          {data.switchForm ? "Sign In" : "Sign Up"}
         </button>
       </div>
     </div>

@@ -1,10 +1,52 @@
+import { useState } from "react";
+import { TbFidgetSpinner } from "react-icons/tb";
+import useAuth from "../../../Hooks/auth/useAuth";
+import Swal from "sweetalert2";
+
 const SignUp = () => {
+  const { createUser, updateNameAndPhoto } = useAuth();
+  const [loading, setLoading] = useState(false);
+
+  const alert = (icon, message) => {
+    Swal.fire({
+      position: "top-end",
+      icon: icon,
+      title: message,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    setLoading(true);
+    createUser(email, password)
+      .then(() => {
+        updateNameAndPhoto(name)
+          .then(() => {
+            alert("success", "User creation successfull ...");
+            setLoading(false);
+          })
+          .catch(() => {
+            alert("warning", "Something went wrong !!!");
+            setLoading(false);
+          });
+      })
+      .catch(() => {
+        alert("warning", "Something went wrong !!!");
+        setLoading(false);
+      });
+  };
+
   return (
     <div className="w-full pt-5">
       <h1 className="text-2xl text-black font-semibold capitalize text-center mb-4">
         Log In
       </h1>
-      <form className="lg:pl-0 xl:pl-4">
+      <form onSubmit={handleCreateUser} className="lg:pl-0 xl:pl-4">
         <div className="mb-4">
           <label
             htmlFor="name"
@@ -54,7 +96,13 @@ const SignUp = () => {
           />
         </div>
         <button className="w-full bg-red-600 hover:bg-red-700 transition-colors py-3 px-7 rounded-md uppercase font-semibold text-white">
-          Sign Up
+          {!loading ? (
+            "Sign Up"
+          ) : (
+            <div className="flex justify-center">
+              <TbFidgetSpinner className="text-white text-2xl animate-spin text-center" />
+            </div>
+          )}
         </button>
       </form>
     </div>
