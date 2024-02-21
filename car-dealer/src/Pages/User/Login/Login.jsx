@@ -9,8 +9,6 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location);
-
   const handleUserLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
