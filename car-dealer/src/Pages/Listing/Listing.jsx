@@ -2,35 +2,42 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import ListingCard from "../../Components/Card/Listing";
+import useTotalCars from "../../Hooks/useTotalCars";
 
 const Listing = () => {
-  const [lowPrice, setLowPrice] = useState(10000);
-  const [maxPrice, setMaxPrice] = useState(50000);
-  const [cars, setCars] = useState([]);
   const axios = useAxiosPublic();
+  const { totalCars: totalCarCount } = useTotalCars();
+  const [cars, setCars] = useState([]);
+  const [maxPrice, setMaxPrice] = useState(30000);
+  const [pageNumber, setPageNumber] = useState(0);
+  const [totalCars, setTotalCars] = useState(0);
+  const limit = 9;
+  let totalPage = Math.ceil(totalCarCount / limit);
 
-  const handleHighPriceChange = (e) => {
+  const handleMaxPrice = (e) => {
     setMaxPrice(e.target.value);
-  };
-  const handleLowPriceChange = (e) => {
-    setLowPrice(e.target.value);
   };
 
   const handleGetCars = () => {
-    if (lowPrice < maxPrice) {
-      axios
-        .get(`/listing/sort/price?low=${lowPrice}&high=${maxPrice}`)
-        .then((res) => setCars(res.data?.cars))
-        .catch((err) => console.log(err));
-    }
+    axios
+      .get(`/listing/sort/price?high=${maxPrice}`)
+      .then((res) => {
+        setCars(res.data?.cars);
+        setTotalCars(0);
+      })
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
+    let skip = pageNumber * limit;
     axios
-      .get("/listing/cars")
-      .then((res) => setCars(res?.data?.cars))
+      .get(`/listing/cars?skip=${skip}`)
+      .then((res) => {
+        setCars(res?.data?.cars);
+        setTotalCars(res.data?.total);
+      })
       .catch((err) => console.log(err));
-  }, []);
+  }, [pageNumber]);
 
   return (
     <div className="max-w-screen-xl mx-auto px-3 xl:px-0 font-raleway">
@@ -57,26 +64,15 @@ const Listing = () => {
             <h2 className="text-xl font-semibold mb-3">Select Price Range</h2>
             <div>
               <div>
-                <h2 className="font-sans mb-2">Low : {lowPrice}</h2>
+                <h2 className="font-sans mb-2">
+                  {10000} to {maxPrice}
+                </h2>
                 <input
                   className="w-full cursor-pointer"
                   type="range"
-                  step={10}
                   min={10000}
                   max={50000}
-                  onChange={handleLowPriceChange}
-                  onClick={handleGetCars}
-                />
-              </div>
-              <div>
-                <h2 className="font-sans mb-2">High : {maxPrice}</h2>
-                <input
-                  className="w-full cursor-pointer"
-                  type="range"
-                  step={10}
-                  min={50000}
-                  max={100000}
-                  onChange={handleHighPriceChange}
+                  onChange={handleMaxPrice}
                   onClick={handleGetCars}
                 />
               </div>
@@ -95,6 +91,43 @@ const Listing = () => {
               No Cars found
             </h1>
           )}
+          <div
+            className={`${
+              totalCars < 6 ? "hidden" : ""
+            } flex gap-1 justify-center flex-wrap mt-8 px-5`}
+          >
+            <button
+              disabled={pageNumber <= 0 && true}
+              onClick={() => {
+                setPageNumber(pageNumber - 1);
+              }}
+              className="py-1 px-3 border-2 rounded-lg uppercase hover:bg-red-600 transition-colors hover:text-white"
+            >
+              Prev
+            </button>
+            {[...Array(totalPage || 0).keys()]?.map((index) => (
+              <button
+                key={`paginationBtn${index}`}
+                onClick={() => {
+                  setPageNumber(index);
+                }}
+                className={`${
+                  pageNumber == index && "bg-red-600"
+                } py-1 px-3 border-2 rounded-lg uppercase hover:bg-red-600 transition-colors hover:text-white`}
+              >
+                {index + 1}
+              </button>
+            ))}
+            <button
+              disabled={pageNumber == totalPage - 1 && true}
+              onClick={() => {
+                setPageNumber(pageNumber + 1);
+              }}
+              className="py-1 px-3 border-2 rounded-lg uppercase hover:bg-red-600 transition-colors hover:text-white"
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </div>
