@@ -29,4 +29,16 @@ const featured = async (req, res, next) => {
   }
 };
 
-module.exports = { featured, getCars };
+//count total cars
+const countTotalCars = async (req, res, next) => {
+  try {
+    const totalCars = await Cars.estimatedDocumentCount();
+    res.send({
+      totalCars,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { featured, getCars, countTotalCars };
