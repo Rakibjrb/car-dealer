@@ -42,7 +42,7 @@ const TopNav = () => {
             {showMenu && (
               <div className="absolute bg-slate-500 w-[200px] right-0 p-3 rounded-md space-y-3">
                 <h3>{user?.displayName}</h3>
-                <h3>View Cart</h3>
+                <h3>View Favourites</h3>
                 <button className="hover:text-red-600" onClick={() => logOut()}>
                   Logout
                 </button>

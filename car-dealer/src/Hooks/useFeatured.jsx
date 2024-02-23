@@ -3,7 +3,11 @@ import useAxiosPublic from "./axios/useAxiosPublic";
 
 const useFeatured = () => {
   const axios = useAxiosPublic();
-  const { data: featured = [], refetch } = useQuery({
+  const {
+    data: featured = [],
+    refetch,
+    isLoading,
+  } = useQuery({
     queryKey: ["featuerd"],
     queryFn: async () => {
       const res = await axios.get("/featured");
@@ -11,7 +15,7 @@ const useFeatured = () => {
     },
   });
 
-  return { featured, refetch };
+  return { featured, refetch, isLoading };
 };
 
 export default useFeatured;

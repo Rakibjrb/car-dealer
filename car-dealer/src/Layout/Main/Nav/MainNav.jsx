@@ -75,7 +75,7 @@ const MainNav = () => {
                     <h2 className="text-2xl mb-3 pl-10 py-4">User</h2>
                     <div className="px-10 space-y-5">
                       <h3 className="text-xl">{user?.displayName}</h3>
-                      <h3 className="text-xl">View Cart</h3>
+                      <h3 className="text-xl">View Favourites</h3>
                       <button
                         onClick={() => logOut()}
                         className="text-xl hover:text-red-600"

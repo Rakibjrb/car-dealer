@@ -28,7 +28,9 @@ const ListingCars = () => {
         </h2>
       </div>
       {isLoading ? (
-        <Spinner />
+        <div className="mt-10">
+          <Spinner />
+        </div>
       ) : cars?.total > 0 ? (
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-3">
           {cars?.cars?.map((car, index) => (

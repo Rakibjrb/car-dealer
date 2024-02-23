@@ -4,11 +4,12 @@ import clinetImage from "../../../assets/images/client/client.jpg";
 import SwiperNavButtons from "../../../Components/SwiperNavButtons/SwiperNavButtons";
 import useAxiosPublic from "../../../Hooks/axios/useAxiosPublic";
 import "swiper/css";
+import Spinner from "../../../Components/Spinner/Spinner";
 
 const Testimonials = () => {
   const axios = useAxiosPublic();
 
-  const { data: testimonials } = useQuery({
+  const { data: testimonials, isLoading } = useQuery({
     queryKey: ["testimonials"],
     queryFn: async () => {
       const res = await axios.get("./testimonials");
@@ -26,35 +27,41 @@ const Testimonials = () => {
           <h2 className="capitalize text-5xl font-bold">
             What Our {"Client's"} <span className="text-red-600">Says</span>
           </h2>
-          <Swiper navigation>
-            {testimonials?.map((testimonial, index) => (
-              <SwiperSlide key={`testimonialnumber${index}`}>
-                <div className={`mt-5 w-full`}>
-                  <p className="text-xl text-justify leading-10 font-semibold text-[#777]">
-                    {testimonial?.description}
-                  </p>
-                  <div className="mt-8 flex justify-between items-center">
-                    <div className=" flex items-center gap-3">
-                      <img
-                        className="w-14 h-14 rounded-full"
-                        src={testimonial?.image}
-                        alt=""
-                      />
-                      <div>
-                        <h3 className="text-2xl font-bold">
-                          {testimonial?.name}
-                        </h3>
-                        <h4 className="font-sans">
-                          Date : {testimonial?.date}
-                        </h4>
+          {isLoading ? (
+            <div className="mt-10">
+              <Spinner />
+            </div>
+          ) : (
+            <Swiper navigation>
+              {testimonials?.map((testimonial, index) => (
+                <SwiperSlide key={`testimonialnumber${index}`}>
+                  <div className={`mt-5 w-full`}>
+                    <p className="text-xl text-justify leading-10 font-semibold text-[#777]">
+                      {testimonial?.description}
+                    </p>
+                    <div className="mt-8 flex justify-between items-center">
+                      <div className=" flex items-center gap-3">
+                        <img
+                          className="w-14 h-14 rounded-full"
+                          src={testimonial?.image}
+                          alt=""
+                        />
+                        <div>
+                          <h3 className="text-2xl font-bold">
+                            {testimonial?.name}
+                          </h3>
+                          <h4 className="font-sans">
+                            Date : {testimonial?.date}
+                          </h4>
+                        </div>
                       </div>
+                      <SwiperNavButtons />
                     </div>
-                    <SwiperNavButtons />
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
 
         <div>

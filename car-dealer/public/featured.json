@@ -7,97 +7,644 @@
       "https://i.ibb.co/xXFDBx7/bluecar3.png",
       "https://i.ibb.co/djg76yT/redcar1.jpg"
     ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
-    "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
+    "subtitle": "Toyota Camry 2023",
+    "title": "Toyota Camry XSE",
+    "details": "The Toyota Camry XSE 2023 is a reliable and stylish sedan with advanced safety features, a fuel-efficient engine, and a spacious interior. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "35,000",
+    "fuelType": "Gasoline",
+    "mileage": "80",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
   },
   {
     "featured": "true",
     "date": "2024",
     "image": [
       "https://i.ibb.co/xXFDBx7/bluecar3.png",
-      "https://i.ibb.co/TcxkJy9/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
       "https://i.ibb.co/djg76yT/redcar1.jpg"
     ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
-    "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
+    "subtitle": "Chevrolet Malibu 2023",
+    "title": "Chevrolet Malibu LT",
+    "details": "The Chevrolet Malibu LT 2023 is a family-friendly midsize sedan, known for its comfortable ride and modern technology. It features a spacious cabin and fuel-efficient performance. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "32,500",
+    "fuelType": "Gasoline",
+    "mileage": "85",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
   },
   {
     "featured": "true",
     "date": "2024",
     "image": [
-      "https://i.ibb.co/djg76yT/redcar2.jpg",
-      "https://i.ibb.co/xXFDBx7/bluecar1.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
       "https://i.ibb.co/xXFDBx7/bluecar3.png"
     ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
-    "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
+    "subtitle": "Honda Accord 2023",
+    "title": "Honda Accord Sport",
+    "details": "The Honda Accord Sport 2023 is a versatile and efficient sedan, combining a sporty design with practical features. It offers a smooth ride and advanced safety technology. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "33,800",
+    "fuelType": "Gasoline",
+    "mileage": "78",
+    "transmission": "CVT",
+    "recect": "0",
+    "carType": "sedan"
   },
   {
     "featured": "true",
     "date": "2024",
     "image": [
-      "https://i.ibb.co/hcVDfwM/bluecar1.png",
-      "https://i.ibb.co/TcxkJy9/redcar1.jpg",
-      "https://i.ibb.co/djg76yT/redcar3.jpg"
-    ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
-    "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
-  },
-  {
-    "featured": "true",
-    "date": "2024",
-    "image": [
-      "https://i.ibb.co/Rvy7Xh7/redcar2.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
       "https://i.ibb.co/xXFDBx7/bluecar3.png",
       "https://i.ibb.co/djg76yT/redcar1.jpg"
     ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
-    "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
+    "subtitle": "Nissan Altima 2023",
+    "title": "Nissan Altima SV",
+    "details": "The Nissan Altima SV 2023 is a comfortable and fuel-efficient sedan, equipped with modern features and a spacious interior. It's known for its reliability and stylish design. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "34,200",
+    "fuelType": "Gasoline",
+    "mileage": "82",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
   },
   {
     "featured": "true",
     "date": "2024",
     "image": [
       "https://i.ibb.co/xXFDBx7/bluecar3.png",
-      "https://i.ibb.co/TcxkJy9/redcar1.jpg"
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
     ],
-    "subtitle": "Mini Cooper 3 Similar",
-    "title": "Chevrolet suburban 2021 mo",
-    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt expedita quae eligendi sequi dolor nihil dolorum maxime, distinctio, id repellendus error perferendis iste! Pariatur, in exercitationem commodi minima nam necessitatibus obcaecati quasi natus corporis beatae quae libero officiis ex voluptatibus blanditiis impedit rem. Perspiciatis a ex hic animi quasi dignissimos, corrupti accusantium consequuntur libero. Eligendi odio doloribus maiores facere dolorem. Cumque ipsam distinctio facere architecto iste voluptatum et sunt, obcaecati magni error voluptates debitis laudantium, dolores mollitia dolorem rem magnam incidunt tempora necessitatibus deserunt. Fugiat voluptatibus ab, provident odit ut eligendi. Magni minus tempora aspernatur, sed vel eius aliquid alias?",
-    "price": "47,000",
-    "fuelType": "Petrol",
+    "subtitle": "Ford Fusion 2023",
+    "title": "Ford Fusion SE",
+    "details": "The Ford Fusion SE 2023 is a sleek and modern sedan, offering a blend of performance and technology. With its comfortable interior and advanced safety features, it's an ideal choice for daily commuting. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "36,500",
+    "fuelType": "Gasoline",
+    "mileage": "79",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "true",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Kia Optima 2023",
+    "title": "Kia Optima LX",
+    "details": "The Kia Optima LX 2023 is a stylish and affordable sedan, featuring a comfortable interior and modern technology. It provides a smooth and enjoyable driving experience for individuals and families alike. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "31,900",
+    "fuelType": "Gasoline",
+    "mileage": "87",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "true",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg"
+    ],
+    "subtitle": "Hyundai Sonata 2023",
+    "title": "Hyundai Sonata Limited",
+    "details": "The Hyundai Sonata Limited 2023 is a premium sedan known for its elegant design and advanced features. It offers a spacious and luxurious interior, making it an excellent choice for those seeking a touch of sophistication. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "38,500",
+    "fuelType": "Gasoline",
+    "mileage": "75",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "sedan"
+  },
+  {
+    "featured": "true",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Mazda6 2023",
+    "title": "Mazda6 Grand Touring",
+    "details": "The Mazda6 Grand Touring 2023 is a dynamic and stylish sedan, combining performance with elegance. It boasts advanced safety features, a responsive engine, and a well-crafted interior. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "37,200",
+    "fuelType": "Gasoline",
+    "mileage": "76",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
+  },
+  {
+    "featured": "true",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Volkswagen Passat 2023",
+    "title": "Volkswagen Passat R-Line",
+    "details": "The Volkswagen Passat R-Line 2023 is a sophisticated sedan with a focus on performance and style. It features a well-appointed interior and advanced technology, providing a comfortable and enjoyable driving experience. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "39,000",
+    "fuelType": "Gasoline",
+    "mileage": "74",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "true",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Dodge Grand Caravan 2023",
+    "title": "Dodge Grand Caravan SXT",
+    "details": "The Dodge Grand Caravan SXT 2023 is a spacious and family-friendly minivan, offering ample cargo space and versatile seating options. It's equipped with modern entertainment features to keep passengers entertained on long journeys. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "28,500",
+    "fuelType": "Gasoline",
     "mileage": "90",
-    "transmission": "Auto",
-    "recect": "0"
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Jeep Cherokee 2023",
+    "title": "Jeep Cherokee Trailhawk",
+    "details": "The Jeep Cherokee Trailhawk 2023 is a rugged SUV designed for off-road adventures. It combines the capability of a four-wheel-drive system with modern tech features, making it a versatile choice for outdoor enthusiasts. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "42,000",
+    "fuelType": "Gasoline",
+    "mileage": "75",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Chevrolet Camaro 2023",
+    "title": "Chevrolet Camaro SS Convertible",
+    "details": "The Chevrolet Camaro SS Convertible 2023 is a powerful and stylish convertible, providing an exhilarating driving experience. With its top-down capability and high-performance engine, it's perfect for those who enjoy the thrill of open-air driving. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "45,500",
+    "fuelType": "Petrol",
+    "mileage": "70",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Ford F-150 2023",
+    "title": "Ford F-150 XLT",
+    "details": "The Ford F-150 XLT 2023 is a reliable and powerful pickup truck, known for its towing capacity and versatile bed features. It combines toughness with modern technology, making it an ideal choice for both work and daily use. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "38,800",
+    "fuelType": "Gasoline",
+    "mileage": "68",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Ram 1500 2023",
+    "title": "Ram 1500 Laramie",
+    "details": "The Ram 1500 Laramie 2023 is a luxurious yet powerful pickup truck, offering a smooth ride and a premium interior. It's well-equipped with modern tech and safety features, making it a comfortable and capable choice for various needs. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "41,200",
+    "fuelType": "Gasoline",
+    "mileage": "72",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Porsche 911 2023",
+    "title": "Porsche 911 Carrera",
+    "details": "The Porsche 911 Carrera 2023 is an iconic and high-performance sports car, known for its precision engineering and timeless design. It delivers an exhilarating driving experience with cutting-edge technology and luxurious features. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "99,000",
+    "fuelType": "Petrol",
+    "mileage": "65",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Chrysler Pacifica 2023",
+    "title": "Chrysler Pacifica Touring",
+    "details": "The Chrysler Pacifica Touring 2023 is a stylish and family-oriented minivan, featuring a comfortable and spacious interior. It offers advanced safety features and entertainment options for a pleasant travel experience. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "36,500",
+    "fuelType": "Gasoline",
+    "mileage": "88",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Subaru Outback 2023",
+    "title": "Subaru Outback Limited",
+    "details": "The Subaru Outback Limited 2023 is a versatile SUV designed for adventure, featuring all-wheel drive and rugged capabilities. It provides a comfortable ride and a spacious interior, making it suitable for both city commutes and outdoor exploration. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "37,800",
+    "fuelType": "Gasoline",
+    "mileage": "77",
+    "transmission": "CVT",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Chevrolet Silverado 2023",
+    "title": "Chevrolet Silverado LT",
+    "details": "The Chevrolet Silverado LT 2023 is a robust and capable pickup truck, ideal for both work and everyday use. With a spacious cabin and towing capabilities, it meets the needs of those seeking a reliable and powerful truck. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "39,500",
+    "fuelType": "Gasoline",
+    "mileage": "70",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Toyota Camry 2023",
+    "title": "Toyota Camry XSE",
+    "details": "The Toyota Camry XSE 2023 is a reliable and stylish sedan with advanced safety features, a fuel-efficient engine, and a spacious interior. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "35,000",
+    "fuelType": "Gasoline",
+    "mileage": "80",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Chevrolet Malibu 2023",
+    "title": "Chevrolet Malibu LT",
+    "details": "The Chevrolet Malibu LT 2023 is a family-friendly midsize sedan, known for its comfortable ride and modern technology. It features a spacious cabin and fuel-efficient performance. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "32,500",
+    "fuelType": "Gasoline",
+    "mileage": "85",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Honda Accord 2023",
+    "title": "Honda Accord Sport",
+    "details": "The Honda Accord Sport 2023 is a versatile and efficient sedan, combining a sporty design with practical features. It offers a smooth ride and advanced safety technology. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "33,800",
+    "fuelType": "Gasoline",
+    "mileage": "78",
+    "transmission": "CVT",
+    "recect": "0",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Nissan Altima 2023",
+    "title": "Nissan Altima SV",
+    "details": "The Nissan Altima SV 2023 is a comfortable and fuel-efficient sedan, equipped with modern features and a spacious interior. It's known for its reliability and stylish design. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "34,200",
+    "fuelType": "Gasoline",
+    "mileage": "82",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Ford Fusion 2023",
+    "title": "Ford Fusion SE",
+    "details": "The Ford Fusion SE 2023 is a sleek and modern sedan, offering a blend of performance and technology. With its comfortable interior and advanced safety features, it's an ideal choice for daily commuting. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "36,500",
+    "fuelType": "Gasoline",
+    "mileage": "79",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Kia Optima 2023",
+    "title": "Kia Optima LX",
+    "details": "The Kia Optima LX 2023 is a stylish and affordable sedan, featuring a comfortable interior and modern technology. It provides a smooth and enjoyable driving experience for individuals and families alike. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "31,900",
+    "fuelType": "Gasoline",
+    "mileage": "87",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Hyundai Sonata 2023",
+    "title": "Hyundai Sonata Limited",
+    "details": "The Hyundai Sonata Limited 2023 is a premium sedan known for its elegant design and advanced features. It offers a spacious and luxurious interior, making it an excellent choice for those seeking a touch of sophistication. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "38,500",
+    "fuelType": "Gasoline",
+    "mileage": "75",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Mazda6 2023",
+    "title": "Mazda6 Grand Touring",
+    "details": "The Mazda6 Grand Touring 2023 is a dynamic and stylish sedan, combining performance with elegance. It boasts advanced safety features, a responsive engine, and a well-crafted interior. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "37,200",
+    "fuelType": "Gasoline",
+    "mileage": "76",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Volkswagen Passat 2023",
+    "title": "Volkswagen Passat R-Line",
+    "details": "The Volkswagen Passat R-Line 2023 is a sophisticated sedan with a focus on performance and style. It features a well-appointed interior and advanced technology, providing a comfortable and enjoyable driving experience. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "39,000",
+    "fuelType": "Gasoline",
+    "mileage": "74",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Dodge Grand Caravan 2023",
+    "title": "Dodge Grand Caravan SXT",
+    "details": "The Dodge Grand Caravan SXT 2023 is a spacious and family-friendly minivan, offering ample cargo space and versatile seating options. It's equipped with modern entertainment features to keep passengers entertained on long journeys. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "28,500",
+    "fuelType": "Gasoline",
+    "mileage": "90",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Jeep Cherokee 2023",
+    "title": "Jeep Cherokee Trailhawk",
+    "details": "The Jeep Cherokee Trailhawk 2023 is a rugged SUV designed for off-road adventures. It combines the capability of a four-wheel-drive system with modern tech features, making it a versatile choice for outdoor enthusiasts. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "42,000",
+    "fuelType": "Gasoline",
+    "mileage": "75",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Chevrolet Camaro 2023",
+    "title": "Chevrolet Camaro SS Convertible",
+    "details": "The Chevrolet Camaro SS Convertible 2023 is a powerful and stylish convertible, providing an exhilarating driving experience. With its top-down capability and high-performance engine, it's perfect for those who enjoy the thrill of open-air driving. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "45,500",
+    "fuelType": "Petrol",
+    "mileage": "70",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Ford F-150 2023",
+    "title": "Ford F-150 XLT",
+    "details": "The Ford F-150 XLT 2023 is a reliable and powerful pickup truck, known for its towing capacity and versatile bed features. It combines toughness with modern technology, making it an ideal choice for both work and daily use. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "38,800",
+    "fuelType": "Gasoline",
+    "mileage": "68",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Ram 1500 2023",
+    "title": "Ram 1500 Laramie",
+    "details": "The Ram 1500 Laramie 2023 is a luxurious yet powerful pickup truck, offering a smooth ride and a premium interior. It's well-equipped with modern tech and safety features, making it a comfortable and capable choice for various needs. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "41,200",
+    "fuelType": "Gasoline",
+    "mileage": "72",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Porsche 911 2023",
+    "title": "Porsche 911 Carrera",
+    "details": "The Porsche 911 Carrera 2023 is an iconic and high-performance sports car, known for its precision engineering and timeless design. It delivers an exhilarating driving experience with cutting-edge technology and luxurious features. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "99,000",
+    "fuelType": "Petrol",
+    "mileage": "65",
+    "transmission": "Automatic",
+    "recect": "0",
+    "carType": "coupe"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Chrysler Pacifica 2023",
+    "title": "Chrysler Pacifica Touring",
+    "details": "The Chrysler Pacifica Touring 2023 is a stylish and family-oriented minivan, featuring a comfortable and spacious interior. It offers advanced safety features and entertainment options for a pleasant travel experience. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "36,500",
+    "fuelType": "Gasoline",
+    "mileage": "88",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "sedan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/djg76yT/redcar1.jpg",
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png"
+    ],
+    "subtitle": "Subaru Outback 2023",
+    "title": "Subaru Outback Limited",
+    "details": "The Subaru Outback Limited 2023 is a versatile SUV designed for adventure, featuring all-wheel drive and rugged capabilities. It provides a comfortable ride and a spacious interior, making it suitable for both city commutes and outdoor exploration. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "37,800",
+    "fuelType": "Gasoline",
+    "mileage": "77",
+    "transmission": "CVT",
+    "recect": "0",
+    "carType": "minivan"
+  },
+  {
+    "featured": "false",
+    "date": "2024",
+    "image": [
+      "https://i.ibb.co/TcxkJy9/redcar3.jpg",
+      "https://i.ibb.co/xXFDBx7/bluecar3.png",
+      "https://i.ibb.co/djg76yT/redcar1.jpg"
+    ],
+    "subtitle": "Chevrolet Silverado 2023",
+    "title": "Chevrolet Silverado LT",
+    "details": "The Chevrolet Silverado LT 2023 is a robust and capable pickup truck, ideal for both work and everyday use. With a spacious cabin and towing capabilities, it meets the needs of those seeking a reliable and powerful truck. Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    "price": "39,500",
+    "fuelType": "Gasoline",
+    "mileage": "70",
+    "transmission": "Automatic",
+    "recect": "1",
+    "carType": "hatchback"
   }
 ]
