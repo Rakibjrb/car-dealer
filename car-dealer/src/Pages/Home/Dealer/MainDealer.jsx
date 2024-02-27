@@ -67,12 +67,12 @@ const MainDealer = () => {
 
   return (
     <div className="grid md:grid-cols-4 gap-8 md:gap-4">
-      <div className="bg-black md:col-span-1 p-8 space-y-6 rounded-lg">
+      <div className="bg-[#151515] md:col-span-1 p-8 space-y-6 rounded-lg">
         {companies?.map((company, index) => (
           <div
             onClick={() => handleDealerInfo(company)}
             key={`bestdealers${index}`}
-            className="cursor-pointer hover:opacity-70 transition-all"
+            className="cursor-pointer hover:opacity-60 transition-all"
           >
             <div className="flex justify-center">
               <img src={company?.img} alt={company?.name} />
