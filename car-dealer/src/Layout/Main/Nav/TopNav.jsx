@@ -9,8 +9,8 @@ const TopNav = () => {
   const { user, logOut } = useAuth();
 
   return (
-    <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between items-center lg:mr-4 py-5 lg:py-0">
-      <div className="flex flex-col md:flex-row items-center gap-4">
+    <div className="max-w-screen-xl mx-auto hidden lg:flex flex-col lg:flex-row lg:justify-between items-center py-5 lg:py-0 pr-3 xl:pr-0">
+      <div className=" flex flex-col md:flex-row items-center gap-4">
         <div className="flex items-center">
           <div className="bg-red-600 pl-16 pr-12 py-4 relative h-[52px]">
             <div className="bg-red-600 w-[45px] h-[45px] lg:w-[39px] lg:h-[39px] absolute top-1 lg:top-[5px] -right-5 lg:-right-5 transform rotate-45"></div>
