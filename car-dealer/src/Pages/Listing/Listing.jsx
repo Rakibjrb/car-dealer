@@ -33,6 +33,7 @@ const Listing = () => {
     setMaxPrice(e.target.value);
   };
 
+  //fetch new data based on price range
   const handleGetCars = () => {
     setLoading(true);
     axios
@@ -44,6 +45,26 @@ const Listing = () => {
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
+      });
+  };
+
+  //fetch new data based on search text
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const text = e.target.searchText.value;
+    axios
+      .get(`/search/car?search=${text}`)
+      .then((res) => {
+        setCars(res.data.matchedCars);
+        setTotalCars(0);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setCars([]);
+        setTotalCars(0);
         setLoading(false);
       });
   };
@@ -70,8 +91,9 @@ const Listing = () => {
         <div className="md:mt-16 md:col-span-2 space-y-10">
           <div>
             <h2 className="text-xl font-semibold mb-3">Search Your Car</h2>
-            <form className="flex justify-between">
+            <form onSubmit={handleSearch} className="flex justify-between">
               <input
+                name="searchText"
                 className="border py-2 px-3 rounded-lg rounded-r-none outline-none w-full shadow-md"
                 type="text"
                 placeholder="Search Here"
