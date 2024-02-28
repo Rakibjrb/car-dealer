@@ -41,4 +41,20 @@ const carType = async (req, res, next) => {
   }
 };
 
-module.exports = { listingCars, sortCars, carType };
+const searchCars = async (req, res, next) => {
+  try {
+    const text = req.query.search;
+    const regex = new RegExp(text, "i");
+    const matchedCars = await Cars.find({
+      title: { $regex: regex },
+    }).limit(12);
+    res.send({
+      matchedCars,
+    });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};
+
+module.exports = { listingCars, sortCars, carType, searchCars };
