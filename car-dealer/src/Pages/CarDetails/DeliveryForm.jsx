@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import useAuth from "../../Hooks/auth/useAuth";
-import useData from "../../Hooks/data/useData";
 import { useNavigate } from "react-router-dom";
+import generateNumber from "../../utilities/numberGenerator";
+import moment from "moment";
 
 const DeliveryForm = ({ car }) => {
   const navigate = useNavigate();
-  const { setDeliveryInfo } = useData();
+  const invoiceId = generateNumber();
   const { user } = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,9 +15,13 @@ const DeliveryForm = ({ car }) => {
       useremail: e.target.email.value || user.email,
       phone: e.target.phone.value,
       fullAddress: e.target.fullAddress.value,
-      ...car,
+      invoiceId: invoiceId,
+      date: moment().format("DD-MM-YYYY"),
+      title: car.title,
+      details: car.details,
+      price: car.price,
     };
-    setDeliveryInfo(data);
+    sessionStorage.setItem("invoiceInfo", JSON.stringify(data));
     navigate("/order/invoice");
   };
 
@@ -33,6 +38,7 @@ const DeliveryForm = ({ car }) => {
             className="w-full border-2 rounded-md py-1 px-2"
             type="text"
             defaultValue={user?.displayName}
+            required
           />
         </div>
         <div>
@@ -44,6 +50,7 @@ const DeliveryForm = ({ car }) => {
             className="w-full border-2 rounded-md py-1 px-2"
             type="email"
             defaultValue={user?.email}
+            required
           />
         </div>
         <div>
@@ -54,6 +61,7 @@ const DeliveryForm = ({ car }) => {
             name="phone"
             className="w-full border-2 rounded-md py-1 px-2"
             type="text"
+            required
           />
         </div>
         <div>
@@ -64,6 +72,7 @@ const DeliveryForm = ({ car }) => {
             name="fullAddress"
             className="w-full border-2 rounded-md py-1 px-2"
             type="text"
+            required
           ></textarea>
         </div>
         <button className="px-3 py-1 rounded-md bg-red-600 text-white float-right">

@@ -8,7 +8,11 @@ const PrivateRoutes = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <Spinner />;
+    return (
+      <div className="pt-10">
+        <Spinner />
+      </div>
+    );
   }
 
   if (user) {

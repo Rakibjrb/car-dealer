@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export const DataContext = createContext(null);
 
 const DataProvider = ({ children }) => {
-  const [deliveryInfo, setDeliveryInfo] = useState({});
+  const [orderInfo, setOrderInfo] = useState({});
 
-  const data = { deliveryInfo, setDeliveryInfo };
+  const data = { orderInfo, setOrderInfo };
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
