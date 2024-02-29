@@ -9,6 +9,7 @@ import Contact from "../Pages/Contact/Contact";
 import Switch from "../Pages/User/Switch";
 import ViewDetails from "../Pages/CarDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import Invoice from "../Pages/Private/Invoice";
 
 const routes = createBrowserRouter([
   {
@@ -18,14 +19,6 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Main />,
-      },
-      {
-        path: "/car-details/:id",
-        element: (
-          <PrivateRoutes>
-            <ViewDetails />
-          </PrivateRoutes>
-        ),
       },
       {
         path: "/listing",
@@ -46,6 +39,24 @@ const routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+
+      //all private routes here
+      {
+        path: "/car-details/:id",
+        element: (
+          <PrivateRoutes>
+            <ViewDetails />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/order/invoice",
+        element: (
+          <PrivateRoutes>
+            <Invoice />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
