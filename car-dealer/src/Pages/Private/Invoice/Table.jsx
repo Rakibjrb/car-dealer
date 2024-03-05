@@ -2,13 +2,6 @@ import PropTypes from "prop-types";
 import "./invoiceTable.css";
 
 const Table = ({ info }) => {
-  const serviceCharge = 50;
-  const tax = 60;
-  const price = parseFloat(info?.price);
-  const total = price + tax + serviceCharge;
-  const payable = total * 0.2;
-  const due = total - payable;
-
   return (
     <table className="w-full invoice overflow-x-auto">
       <thead className="">
@@ -24,23 +17,23 @@ const Table = ({ info }) => {
         </tr>
         <tr>
           <td>Service Charge</td>
-          <td>$ {serviceCharge}</td>
+          <td>$ {info?.serviceCharge}</td>
         </tr>
         <tr>
           <td>Tax</td>
-          <td>$ {tax}</td>
+          <td>$ {info?.tax}</td>
         </tr>
         <tr>
           <td className="font-bold">Total</td>
-          <td className="font-bold">$ {total}</td>
+          <td className="font-bold">$ {info?.total}</td>
         </tr>
         <tr>
           <td className="font-bold">Payable Amount</td>
-          <td className="font-bold">$ {payable}</td>
+          <td className="font-bold">$ {info?.payable}</td>
         </tr>
         <tr>
           <td className="font-bold">Due Amount</td>
-          <td className="font-bold">$ {due}</td>
+          <td className="font-bold">$ {info?.due}</td>
         </tr>
       </tbody>
     </table>
