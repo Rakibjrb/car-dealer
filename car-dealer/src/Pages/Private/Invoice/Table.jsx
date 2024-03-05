@@ -6,13 +6,13 @@ const Table = ({ info }) => {
     <table className="w-full invoice overflow-x-auto">
       <thead className="">
         <tr>
-          <td className="font-bold">Name</td>
-          <td className="font-bold">MRP</td>
+          <td className="font-bold uppercase">Name</td>
+          <td className="font-bold uppercase">Price</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{info?.title}</td>
+          <td>Model : {info?.title}</td>
           <td>$ {info?.price}</td>
         </tr>
         <tr>

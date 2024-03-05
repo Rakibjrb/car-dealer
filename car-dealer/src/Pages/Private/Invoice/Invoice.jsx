@@ -1,29 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import Table from "./Table";
 import Modal from "../../../Modal/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Payment from "../payment/Payment";
 
 const Invoice = () => {
+  const [paymentInfo, setPaymentInfo] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const invoiceInfo = sessionStorage.getItem("invoiceInfo");
-  const info = JSON.parse(invoiceInfo);
-  const serviceCharge = 50;
-  const tax = 60;
-  const price = parseFloat(info?.price);
-  const total = price + tax + serviceCharge;
-  const payable = total * 0.2;
-  const due = total - payable;
-
-  const newinfo = {
-    ...info,
-    serviceCharge,
-    tax,
-    total,
-    payable,
-    due,
-  };
 
   const handleProcced = () => {
     setIsOpen(true);
@@ -33,6 +17,29 @@ const Invoice = () => {
     sessionStorage.removeItem("invoiceInfo");
     navigate("/");
   };
+
+  useEffect(() => {
+    const invoiceInfo = sessionStorage.getItem("invoiceInfo");
+    if (invoiceInfo) {
+      const info = JSON.parse(invoiceInfo);
+      const serviceCharge = 50;
+      const tax = 60;
+      const price = parseFloat(info?.price);
+      const total = price + tax + serviceCharge;
+      const payable = total * 0.2;
+      const due = total - payable;
+
+      const newinfo = {
+        ...info,
+        serviceCharge,
+        tax,
+        total,
+        payable,
+        due,
+      };
+      setPaymentInfo(newinfo);
+    }
+  }, []);
 
   return (
     <>
@@ -56,8 +63,10 @@ const Invoice = () => {
                 <h4 className="text-xl">info@motorx.com</h4>
               </div>
               <div className="space-y-2">
-                <h4 className="text-xl md:text-right">{info?.date}</h4>
-                <h4 className="font-bold">Invoice ID : {info?.invoiceId}</h4>
+                <h4 className="text-xl md:text-right">{paymentInfo?.date}</h4>
+                <h4 className="font-bold">
+                  Invoice ID : {paymentInfo?.invoiceId}
+                </h4>
               </div>
             </div>
             <div className="mt-8 flex flex-col lg:flex-row gap-5">
@@ -66,10 +75,10 @@ const Invoice = () => {
                   Bill To
                 </h3>
                 <div className="space-y-2">
-                  <h4 className="text-xl">{info?.username}</h4>
-                  <h4 className="text-xl">{info?.phone}</h4>
-                  <h4 className="text-xl">{info?.useremail}</h4>
-                  <h4 className="text-xl">{info?.fullAddress}</h4>
+                  <h4 className="text-xl">{paymentInfo?.username}</h4>
+                  <h4 className="text-xl">{paymentInfo?.phone}</h4>
+                  <h4 className="text-xl">{paymentInfo?.useremail}</h4>
+                  <h4 className="text-xl">{paymentInfo?.fullAddress}</h4>
                 </div>
               </div>
               <div className="flex-1">
@@ -77,13 +86,17 @@ const Invoice = () => {
                   Bill Details
                 </h3>
                 <div className="space-y-2">
-                  <h4 className="text-xl font-semibold">{info?.title}</h4>
-                  <h4 className="text-xl">{info?.details.slice(0, 130)} ...</h4>
+                  <h4 className="text-xl font-semibold">
+                    {paymentInfo?.title}
+                  </h4>
+                  <h4 className="text-xl font-semibold">
+                    {paymentInfo?.details}
+                  </h4>
                 </div>
               </div>
             </div>
             <div className="mt-5">
-              <Table info={newinfo} />
+              <Table info={paymentInfo} />
             </div>
           </div>
           <div className="bg-red-800 h-8 w-full mt-5"></div>
@@ -105,8 +118,10 @@ const Invoice = () => {
       </div>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         <div>
-          <h1 className="text-center text-3xl font-bold">Pay Your Amount</h1>
-          <Payment info={newinfo} setIsOpen={setIsOpen} />
+          <h1 className="text-center text-2xl font-bold mb-6">
+            Enter Card Information
+          </h1>
+          <Payment info={paymentInfo} setIsOpen={setIsOpen} />
         </div>
       </Modal>
     </>
