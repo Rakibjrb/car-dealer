@@ -7,6 +7,7 @@ const {
 } = require("./controllers/errorhandle/handleErrors");
 const featuredRoutes = require("./routes/cars/cars");
 const listingRoutes = require("./routes/cars/listingCars");
+const payment = require("./routes/payment/payment");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -27,6 +28,9 @@ app.use(featuredRoutes);
 
 //listing car routes
 app.use(listingRoutes);
+
+//payment routes
+app.use(payment);
 
 //not matched routes
 app.all("*", routeNotFound);
