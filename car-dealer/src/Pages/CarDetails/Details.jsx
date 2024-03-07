@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { LuFuel } from "react-icons/lu";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { GiGearStickPattern } from "react-icons/gi";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Modal from "../../Modal/Modal";
 import useAuth from "../../Hooks/auth/useAuth";
 import DeliveryForm from "./DeliveryForm";
 
 const Details = ({ car }) => {
+  const [recect, setRecect] = useState(car?.recect || 0);
+  const [resected, setResected] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
+
+  const handleFavourte = () => {
+    setResected(true);
+  };
+
+  useEffect(() => {
+    setRecect(car?.recect);
+  }, [car?.recect]);
 
   return (
     <div className="space-y-4">
@@ -41,7 +51,17 @@ const Details = ({ car }) => {
           Price : ${car?.price}
         </h3>
         <div className="flex items-center gap-2 text-xl font-serif">
-          <FaRegHeart className="font-bold" /> {car?.recect}
+          <button
+            onClick={handleFavourte}
+            className="hover:bg-[#aaa] hover:shadow-xl hover:shadow-black transition-colors rounded-full p-2"
+          >
+            {resected ? (
+              <FaHeart className="text-xl" />
+            ) : (
+              <FaRegHeart className="text-xl" />
+            )}
+          </button>
+          {recect}
         </div>
       </div>
       <button

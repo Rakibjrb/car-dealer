@@ -11,6 +11,7 @@ import ViewDetails from "../Pages/CarDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Invoice from "../Pages/Private/Invoice/Invoice";
 import Orders from "../Layout/Dashboard/User/Orders/Orders";
+import Favourites from "../Layout/Dashboard/User/Favourites/Favourites";
 
 const routes = createBrowserRouter([
   {
@@ -56,6 +57,14 @@ const routes = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Orders />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/user/favourites",
+        element: (
+          <PrivateRoutes>
+            <Favourites />
           </PrivateRoutes>
         ),
       },

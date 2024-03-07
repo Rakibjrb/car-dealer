@@ -15,7 +15,7 @@ const Orders = () => {
   });
 
   return (
-    <div className="max-w-screen-xl mx-auto px-3 xl:px-0 mt-10">
+    <div className="max-w-screen-xl mx-auto px-3 xl:px-0 mt-5 md:mt-10">
       <h1 className="text-center text-4xl font-bold">Order List</h1>
       {isLoading ? (
         <div className="mt-8">

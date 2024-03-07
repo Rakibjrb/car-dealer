@@ -8,6 +8,7 @@ const {
 const featuredRoutes = require("./routes/cars/cars");
 const listingRoutes = require("./routes/cars/listingCars");
 const payment = require("./routes/payment/payment");
+const favourites = require("./routes/favourites/favourites");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -31,6 +32,9 @@ app.use(listingRoutes);
 
 //payment routes
 app.use(payment);
+
+//favourite routes
+app.use(favourites);
 
 //not matched routes
 app.all("*", routeNotFound);

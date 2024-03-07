@@ -10,6 +10,10 @@ import { GiGearStickPattern } from "react-icons/gi";
 const Card = ({ data }) => {
   const [resected, setResected] = useState(false);
 
+  const handleFavourte = () => {
+    setResected(true);
+  };
+
   return (
     <div className="font-raleway bg-white rounded-t-lg rounded-b-lg">
       <div className="relative">
@@ -57,7 +61,7 @@ const Card = ({ data }) => {
             View Details <FaArrowRight />
           </Link>
           <button
-            onClick={() => setResected(true)}
+            onClick={handleFavourte}
             className="hover:bg-[#aaa] hover:shadow-xl hover:shadow-black transition-colors rounded-full p-2"
           >
             {resected ? (
