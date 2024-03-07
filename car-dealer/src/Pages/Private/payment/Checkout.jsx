@@ -66,7 +66,7 @@ const Checkout = ({ info, setIsOpen }) => {
         sessionStorage.removeItem("invoiceInfo");
         setLoading(false);
         setIsOpen(false);
-        navigate("/user/order-info");
+        navigate("/user/orders");
       }
     }
   };

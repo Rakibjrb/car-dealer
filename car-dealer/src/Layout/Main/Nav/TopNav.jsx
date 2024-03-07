@@ -42,8 +42,26 @@ const TopNav = () => {
             {showMenu && (
               <div className="absolute bg-slate-500 w-[200px] right-0 p-3 rounded-md space-y-3">
                 <h3>{user?.displayName}</h3>
-                <h3>View Favourites</h3>
-                <button className="hover:text-red-600" onClick={() => logOut()}>
+                <h3>
+                  <Link
+                    to={"/user/favourites"}
+                    className="hover:text-red-600 transition-colors"
+                  >
+                    View Favourites
+                  </Link>
+                </h3>
+                <h3>
+                  <Link
+                    to={"/user/orders"}
+                    className="hover:text-red-600 transition-colors"
+                  >
+                    Orders
+                  </Link>
+                </h3>
+                <button
+                  className="hover:text-red-600 transition-colors"
+                  onClick={() => logOut()}
+                >
                   Logout
                 </button>
               </div>

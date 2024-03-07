@@ -10,6 +10,7 @@ import Switch from "../Pages/User/Switch";
 import ViewDetails from "../Pages/CarDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Invoice from "../Pages/Private/Invoice/Invoice";
+import Orders from "../Layout/Dashboard/User/Orders/Orders";
 
 const routes = createBrowserRouter([
   {
@@ -50,10 +51,18 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
+      {
+        path: "/user/orders",
+        element: (
+          <PrivateRoutes>
+            <Orders />
+          </PrivateRoutes>
+        ),
+      },
     ],
   },
   {
-    path: "/order/invoice",
+    path: "/order/invoice/:id",
     element: (
       <PrivateRoutes>
         <Invoice />

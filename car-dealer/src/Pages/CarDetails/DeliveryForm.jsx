@@ -22,7 +22,7 @@ const DeliveryForm = ({ car }) => {
       price: car.price,
     };
     sessionStorage.setItem("invoiceInfo", JSON.stringify(data));
-    navigate("/order/invoice");
+    navigate(`/order/invoice/order`);
   };
 
   return (

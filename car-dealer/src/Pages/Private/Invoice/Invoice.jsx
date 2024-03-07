@@ -1,13 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Table from "./Table";
 import Modal from "../../../Modal/Modal";
-import { useEffect, useState } from "react";
 import Payment from "../payment/Payment";
+import useAxiosPublic from "../../../Hooks/axios/useAxiosPublic";
 
 const Invoice = () => {
+  const id = useParams().id;
   const [paymentInfo, setPaymentInfo] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const axios = useAxiosPublic();
 
   const handleProcced = () => {
     setIsOpen(true);
@@ -19,27 +22,34 @@ const Invoice = () => {
   };
 
   useEffect(() => {
-    const invoiceInfo = sessionStorage.getItem("invoiceInfo");
-    if (invoiceInfo) {
-      const info = JSON.parse(invoiceInfo);
-      const serviceCharge = 50;
-      const tax = 60;
-      const price = parseFloat(info?.price);
-      const total = price + tax + serviceCharge;
-      const payable = total * 0.2;
-      const due = total - payable;
+    if (id != "order") {
+      axios
+        .get(`/orders/${id}`)
+        .then((res) => setPaymentInfo(res.data))
+        .catch(() => setPaymentInfo({}));
+    } else {
+      const invoiceInfo = sessionStorage.getItem("invoiceInfo");
+      if (invoiceInfo) {
+        const info = JSON.parse(invoiceInfo);
+        const serviceCharge = 50;
+        const tax = 60;
+        const price = parseFloat(info?.price);
+        const total = price + tax + serviceCharge;
+        const payable = total * 0.2;
+        const due = total - payable;
 
-      const newinfo = {
-        ...info,
-        serviceCharge,
-        tax,
-        total,
-        payable,
-        due,
-      };
-      setPaymentInfo(newinfo);
+        const newinfo = {
+          ...info,
+          serviceCharge,
+          tax,
+          total,
+          payable,
+          due,
+        };
+        setPaymentInfo(newinfo);
+      }
     }
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -64,9 +74,14 @@ const Invoice = () => {
               </div>
               <div className="space-y-2">
                 <h4 className="text-xl md:text-right">{paymentInfo?.date}</h4>
-                <h4 className="font-bold">
+                <h4 className="font-bold md:text-right">
                   Invoice ID : {paymentInfo?.invoiceId}
                 </h4>
+                {id != "order" && (
+                  <h4 className="font-bold md:text-right">
+                    TrxID ID : {paymentInfo?.trxID}
+                  </h4>
+                )}
               </div>
             </div>
             <div className="mt-8 flex flex-col lg:flex-row gap-5">
@@ -89,8 +104,8 @@ const Invoice = () => {
                   <h4 className="text-xl font-semibold">
                     {paymentInfo?.title}
                   </h4>
-                  <h4 className="text-xl font-semibold">
-                    {paymentInfo?.details}
+                  <h4 className="text-xl">
+                    {paymentInfo?.details?.slice(0, 100) || ""}...
                   </h4>
                 </div>
               </div>
@@ -101,20 +116,24 @@ const Invoice = () => {
           </div>
           <div className="bg-red-800 h-8 w-full mt-5"></div>
         </div>
-        <div className="mt-3 flex gap-3 justify-end md:justify-start">
-          <button
-            onClick={cancelOrder}
-            className="p-3 rounded-lg bg-red-600 hover:bg-red-800 transition-colors md:w-[25%] uppercase text-white"
-          >
-            Cancel Order
-          </button>
-          <button
-            onClick={handleProcced}
-            className="p-3 rounded-lg bg-green-500 hover:bg-green-600 transition-colors md:w-[75%] uppercase text-white"
-          >
-            Procced To Pay
-          </button>
-        </div>
+        {id == "order" ? (
+          <div className="mt-3 flex gap-3 justify-end md:justify-start">
+            <button
+              onClick={cancelOrder}
+              className="p-3 rounded-lg bg-red-600 hover:bg-red-800 transition-colors md:w-[25%] uppercase text-white"
+            >
+              Cancel Order
+            </button>
+            <button
+              onClick={handleProcced}
+              className="p-3 rounded-lg bg-green-500 hover:bg-green-600 transition-colors md:w-[75%] uppercase text-white"
+            >
+              Procced To Pay
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         <div>
