@@ -1,8 +1,36 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
+import useData from "../../Hooks/data/useData";
 
-const FavouriteCard = ({ item }) => {
+const FavouriteCard = ({ item, reloadFavourites }) => {
+  const axios = useAxiosPublic();
+  const { alert } = useData();
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, remove it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`/favourites/${item._id}`)
+          .then((res) => {
+            res.data && alert("success", "Removed");
+            reloadFavourites();
+          })
+          .catch((err) => {
+            err && alert("warning", "something went wrong !!!");
+          });
+      }
+    });
+  };
+
   return (
     <div className="font-raleway bg-gray-300 flex gap-4 p-4 rounded-md items-start md:items-center">
       <img
@@ -18,7 +46,10 @@ const FavouriteCard = ({ item }) => {
             <Link to={`/car-details/${item?.itemId}`}>View Details</Link>
           </h3>
         </div>
-        <button className="bg-red-500 hover:bg-red-700 transition-colors px-2 py-4 rounded-md">
+        <button
+          onClick={handleDelete}
+          className="bg-red-500 hover:bg-red-700 transition-colors px-2 py-4 rounded-md"
+        >
           <AiOutlineDelete className="text-2xl text-gray-300" />
         </button>
       </div>
@@ -28,5 +59,6 @@ const FavouriteCard = ({ item }) => {
 
 FavouriteCard.propTypes = {
   item: PropTypes.object,
+  reloadFavourites: PropTypes.func,
 };
 export default FavouriteCard;

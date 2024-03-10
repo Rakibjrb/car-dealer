@@ -8,7 +8,11 @@ const Favourites = () => {
   const axios = useAxiosPublic();
   const { user } = useAuth();
 
-  const { data: favourites, isLoading } = useQuery({
+  const {
+    data: favourites,
+    isLoading,
+    refetch: reloadFavourites,
+  } = useQuery({
     queryKey: ["getFavourite-Items"],
     queryFn: async () => {
       const res = await axios(`/favourites/${user.email}`);
@@ -30,7 +34,11 @@ const Favourites = () => {
           </h1>
         ) : (
           favourites?.map((item) => (
-            <FavouriteCard key={item?._id} item={item} />
+            <FavouriteCard
+              key={item?._id}
+              item={item}
+              reloadFavourites={reloadFavourites}
+            />
           ))
         )}
       </div>
