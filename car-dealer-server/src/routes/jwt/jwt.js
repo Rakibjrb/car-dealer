@@ -1,5 +1,5 @@
 const jwt = require("express").Router();
-const signToken = require("../../controllers/middlewares/jwt/jwt");
+const { signToken } = require("../../controllers/middlewares/jwt/jwt");
 
 jwt.post("/api/generate-token", signToken);
 

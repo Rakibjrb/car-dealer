@@ -4,9 +4,10 @@ const {
   getOrders,
 } = require("../../controllers/api/payment/payment");
 const createPaymentIntens = require("../../controllers/api/payment/paymentIntent");
+const { verifyToken } = require("../../controllers/middlewares/jwt/jwt");
 
-payment.post("/api/create-payment-intent", createPaymentIntens);
-payment.post("/api/save-payment-info", savePaymentInfo);
-payment.get("/api/orders/:id", getOrders);
+payment.post("/api/create-payment-intent", verifyToken, createPaymentIntens);
+payment.post("/api/save-payment-info", verifyToken, savePaymentInfo);
+payment.get("/api/orders/:id", verifyToken, getOrders);
 
 module.exports = payment;
