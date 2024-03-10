@@ -6,12 +6,45 @@ import { FaRegHeart } from "react-icons/fa";
 import { LuFuel } from "react-icons/lu";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { GiGearStickPattern } from "react-icons/gi";
+import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
+import useData from "../../Hooks/data/useData";
+import useAuth from "../../Hooks/auth/useAuth";
 
 const Card = ({ data }) => {
   const [resected, setResected] = useState(false);
+  const axios = useAxiosPublic();
+  const { alert } = useData();
+  const { user } = useAuth();
 
   const handleFavourte = () => {
-    setResected(true);
+    if (!resected) {
+      axios
+        .post("/favourites", {
+          itemId: data?._id,
+          image: data?.image[0],
+          title: data?.title,
+          useremail: user.email,
+        })
+        .then((res) => {
+          if (res.data.status === 403) {
+            alert("warning", "Item already added");
+            setResected(true);
+            return;
+          }
+          res.data && alert("success", "Added to your favourite item");
+          setResected(true);
+        })
+        .catch((err) => {
+          alert(
+            "warning",
+            "Not added to your favourite item, some went wrong !!!"
+          );
+          console.log(err);
+          setResected(false);
+        });
+    } else {
+      alert("warning", "Item already added");
+    }
   };
 
   return (

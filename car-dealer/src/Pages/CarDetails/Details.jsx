@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { LuFuel } from "react-icons/lu";
 import { IoSpeedometerOutline } from "react-icons/io5";
@@ -7,20 +7,46 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Modal from "../../Modal/Modal";
 import useAuth from "../../Hooks/auth/useAuth";
 import DeliveryForm from "./DeliveryForm";
+import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
+import useData from "../../Hooks/data/useData";
 
 const Details = ({ car }) => {
-  const [recect, setRecect] = useState(car?.recect || 0);
   const [resected, setResected] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
+  const axios = useAxiosPublic();
+  const { alert } = useData();
 
   const handleFavourte = () => {
-    setResected(true);
+    if (!resected) {
+      axios
+        .post("/favourites", {
+          itemId: car?._id,
+          image: car?.image[0],
+          title: car?.title,
+          useremail: user.email,
+        })
+        .then((res) => {
+          if (res.data.status === 403) {
+            alert("warning", "Item already added");
+            setResected(true);
+            return;
+          }
+          res.data && alert("success", "Added to your favourite item");
+          setResected(true);
+        })
+        .catch((err) => {
+          alert(
+            "warning",
+            "Not added to your favourite item, some went wrong !!!"
+          );
+          console.log(err);
+          setResected(false);
+        });
+    } else {
+      alert("warning", "Item already added");
+    }
   };
-
-  useEffect(() => {
-    setRecect(car?.recect);
-  }, [car?.recect]);
 
   return (
     <div className="space-y-4">
@@ -50,7 +76,7 @@ const Details = ({ car }) => {
         <h3 className="text-red-600 text-xl font-bold">
           Price : ${car?.price}
         </h3>
-        <div className="flex items-center gap-2 text-xl font-serif">
+        <div className="text-xl font-serif">
           <button
             onClick={handleFavourte}
             className="hover:bg-[#aaa] hover:shadow-xl hover:shadow-black transition-colors rounded-full p-2"
@@ -61,7 +87,6 @@ const Details = ({ car }) => {
               <FaRegHeart className="text-xl" />
             )}
           </button>
-          {recect}
         </div>
       </div>
       <button
