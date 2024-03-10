@@ -1,22 +1,28 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight, FaHeart } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { LuFuel } from "react-icons/lu";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { GiGearStickPattern } from "react-icons/gi";
-import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import useData from "../../Hooks/data/useData";
 import useAuth from "../../Hooks/auth/useAuth";
+import useAxiosSecure from "../../Hooks/axios/useAxiosSecure";
 
 const Card = ({ data }) => {
   const [resected, setResected] = useState(false);
-  const axios = useAxiosPublic();
+  const navigate = useNavigate();
+  const axios = useAxiosSecure();
   const { alert } = useData();
   const { user } = useAuth();
 
   const handleFavourte = () => {
+    if (!user) {
+      alert("warning", "Login into your account now");
+      navigate("/user");
+      return;
+    }
     if (!resected) {
       axios
         .post("/favourites", {

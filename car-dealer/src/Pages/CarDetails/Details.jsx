@@ -7,14 +7,14 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Modal from "../../Modal/Modal";
 import useAuth from "../../Hooks/auth/useAuth";
 import DeliveryForm from "./DeliveryForm";
-import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import useData from "../../Hooks/data/useData";
+import useAxiosSecure from "../../Hooks/axios/useAxiosSecure";
 
 const Details = ({ car }) => {
   const [resected, setResected] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
   const { alert } = useData();
 
   const handleFavourte = () => {

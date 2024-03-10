@@ -3,14 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import Table from "./Table";
 import Modal from "../../../Modal/Modal";
 import Payment from "../payment/Payment";
-import useAxiosPublic from "../../../Hooks/axios/useAxiosPublic";
+import useAxiosSecure from "../../../Hooks/axios/useAxiosSecure";
 
 const Invoice = () => {
   const id = useParams().id;
   const [paymentInfo, setPaymentInfo] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
 
   const handleProcced = () => {
     setIsOpen(true);

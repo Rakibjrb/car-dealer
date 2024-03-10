@@ -46,24 +46,33 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logOut = () => {
-    Swal.fire({
-      title: "Are you sure?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        signOut(auth)
-          .then(() => {
-            alert("success", "Logout Success ...");
-            setUser(null);
-          })
-          .catch(() => alert("warning", "Something went wrong !!!"));
-      }
-    });
+  const logOut = (value) => {
+    if (value) {
+      Swal.fire({
+        title: "Are you sure?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          signOut(auth)
+            .then(() => {
+              alert("success", "Logout Success ...");
+              setUser(null);
+            })
+            .catch(() => alert("warning", "Something went wrong !!!"));
+        }
+      });
+    } else {
+      signOut(auth)
+        .then(() => {
+          alert("success", "Logout Success. Please re-login your account....");
+          setUser(null);
+        })
+        .catch(() => alert("warning", "Something went wrong !!!"));
+    }
   };
 
   const info = {
@@ -86,7 +95,6 @@ const AuthProvider = ({ children }) => {
             email: user.email,
           })
           .then((res) => {
-            console.log(res.data);
             localStorage.setItem("token", res.data.token);
           })
           .catch((err) => {

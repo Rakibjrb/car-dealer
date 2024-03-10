@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../../Hooks/axios/useAxiosPublic";
 import useData from "../../Hooks/data/useData";
+import useAxiosSecure from "../../Hooks/axios/useAxiosSecure";
 
 const FavouriteCard = ({ item, reloadFavourites }) => {
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
   const { alert } = useData();
   const handleDelete = () => {
     Swal.fire({

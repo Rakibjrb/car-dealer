@@ -60,7 +60,7 @@ const TopNav = () => {
                 </h3>
                 <button
                   className="hover:text-red-600 transition-colors"
-                  onClick={() => logOut()}
+                  onClick={() => logOut(true)}
                 >
                   Logout
                 </button>

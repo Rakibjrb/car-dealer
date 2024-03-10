@@ -86,7 +86,7 @@ const MainNav = () => {
                         </Link>
                       </h3>
                       <button
-                        onClick={() => logOut()}
+                        onClick={() => logOut(true)}
                         className="text-xl hover:text-red-600"
                       >
                         Logout

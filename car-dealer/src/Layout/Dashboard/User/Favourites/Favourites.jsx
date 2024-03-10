@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../../Hooks/auth/useAuth";
-import useAxiosPublic from "../../../../Hooks/axios/useAxiosPublic";
 import Spinner from "../../../../Components/Spinner/Spinner";
 import FavouriteCard from "../../../../Components/Card/FavouriteCard";
+import useAxiosSecure from "../../../../Hooks/axios/useAxiosSecure";
 
 const Favourites = () => {
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
   const { user } = useAuth();
 
   const {

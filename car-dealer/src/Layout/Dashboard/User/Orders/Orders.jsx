@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../../../Hooks/axios/useAxiosPublic";
+import useAxiosSecure from "../../../../Hooks/axios/useAxiosSecure";
 import Spinner from "../../../../Components/Spinner/Spinner";
 import Order from "./Order";
 
 const Orders = () => {
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
 
   const { data: orders, isLoading } = useQuery({
     queryKey: ["get-all-orders"],
@@ -40,7 +40,9 @@ const Orders = () => {
           </table>
         </div>
       ) : (
-        <h2 className="text-center text-xl font-semibold">No data found</h2>
+        <h2 className="text-center text-xl font-semibold mt-5">
+          No data found
+        </h2>
       )}
     </div>
   );

@@ -3,8 +3,8 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/auth/useAuth";
-import useAxiosPublic from "../../../Hooks/axios/useAxiosPublic";
 import { useNavigate } from "react-router-dom";
+import useAxiosSecure from "../../../Hooks/axios/useAxiosSecure";
 
 const Checkout = ({ info, setIsOpen }) => {
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const Checkout = ({ info, setIsOpen }) => {
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
-  const axios = useAxiosPublic();
+  const axios = useAxiosSecure();
   const navigate = useNavigate();
 
   const handlePayment = async (e) => {
