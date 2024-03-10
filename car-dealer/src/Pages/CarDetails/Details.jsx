@@ -25,6 +25,7 @@ const Details = ({ car }) => {
           image: car?.image[0],
           title: car?.title,
           useremail: user.email,
+          price: car?.price,
         })
         .then((res) => {
           if (res.data.status === 403) {

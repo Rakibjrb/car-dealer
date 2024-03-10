@@ -24,6 +24,7 @@ const Card = ({ data }) => {
           image: data?.image[0],
           title: data?.title,
           useremail: user.email,
+          price: data?.price,
         })
         .then((res) => {
           if (res.data.status === 403) {
