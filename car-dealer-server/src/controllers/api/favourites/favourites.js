@@ -21,4 +21,14 @@ const saveFavourites = async (req, res, next) => {
   }
 };
 
-module.exports = { saveFavourites };
+const getFavourites = async (req, res, next) => {
+  try {
+    const email = req.params.email;
+    const allItems = await Favourites.find({ useremail: email });
+    res.send(allItems);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { saveFavourites, getFavourites };
