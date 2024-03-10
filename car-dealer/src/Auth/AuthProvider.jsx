@@ -9,12 +9,14 @@ import {
 } from "firebase/auth";
 import auth from "./auth";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/axios/useAxiosPublic";
 
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const axios = useAxiosPublic();
 
   const alert = (icon, message) => {
     Swal.fire({
@@ -78,9 +80,22 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        axios
+          .post("/generate-token", {
+            username: user.displayName,
+            email: user.email,
+          })
+          .then((res) => {
+            console.log(res.data);
+            localStorage.setItem("token", res.data.token);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
         setLoading(false);
       } else {
         setLoading(false);
+        localStorage.removeItem("token");
       }
     });
     return () => unSubscribe();
