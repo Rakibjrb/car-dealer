@@ -31,4 +31,14 @@ const getFavourites = async (req, res, next) => {
   }
 };
 
-module.exports = { saveFavourites, getFavourites };
+const removeFavourites = async (req, res, next) => {
+  try {
+    const _id = req.params.id;
+    const removedItem = await Favourites.deleteOne({ _id });
+    res.send(removedItem);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { saveFavourites, getFavourites, removeFavourites };

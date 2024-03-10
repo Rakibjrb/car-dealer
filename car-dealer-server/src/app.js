@@ -9,6 +9,7 @@ const featuredRoutes = require("./routes/cars/cars");
 const listingRoutes = require("./routes/cars/listingCars");
 const payment = require("./routes/payment/payment");
 const favourites = require("./routes/favourites/favourites");
+const jwt = require("./routes/jwt/jwt");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -35,6 +36,9 @@ app.use(payment);
 
 //favourite routes
 app.use(favourites);
+
+//generate token
+app.use(jwt);
 
 //not matched routes
 app.all("*", routeNotFound);
